@@ -1,0 +1,103 @@
+import 'package:bin_omaira_motors/features/splash/widgets/animated_logo.dart';
+import 'package:bin_omaira_motors/helper/assets.dart';
+import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/widgets/custom_baground_image.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
+
+  @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  bool animate = false;
+  @override
+  void initState() {
+    super.initState();
+    startAnimation();
+  }
+
+  Future startAnimation() async {
+    await Future.delayed(const Duration(milliseconds: 2000));
+    setState(() {
+      animate = true;
+    });
+    // await Future.delayed(const Duration(milliseconds: 5000));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Stack(
+        children: [
+          CustomBackGroundImage(
+            imageUrl: AssetsData.splashScreen,
+            child:
+                animate ? const AnimatedImagesBody() : const SizedBox.shrink(),
+          ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 3000),
+            curve: Curves.decelerate,
+            left: animate ? 60.h : -1000,
+            right: 40.w,
+            bottom: 210.w,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 48.h),
+                Image.asset(AssetsData.hiddenLogo, fit: BoxFit.cover),
+              ],
+            ),
+          ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 3000),
+            curve: Curves.decelerate,
+            bottom: animate ? 130.h : -1000,
+            right: 40.w,
+            left: 70.w,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                      text: 'Say hello',
+                      style:
+                          TextStyles.textstyle24.copyWith(color: kPrimaryColor),
+                    ),
+                    TextSpan(
+                      text: ' to your next awesome vehicle',
+                      style:
+                          TextStyles.textstyle24.copyWith(color: Colors.white),
+                    ),
+                  ]),
+                ),
+                SizedBox(height: 48.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Powered by  ',
+                      style: TextStyles.textstyle10.copyWith(
+                          fontWeight: FontWeight.w200, color: Colors.grey),
+                    ),
+                    Text(
+                      'Kian Al-Rqmiah',
+                      style: TextStyles.textstyle10.copyWith(
+                          fontWeight: FontWeight.w400, color: Colors.grey),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
