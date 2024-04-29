@@ -1,1 +1,14 @@
-{}
+{
+    "welcome_subtitle" : "Signing up takes only 1 min",
+    "skip_intro": "Skip intro",
+    "create_new_account" : "Create New Account",
+    "signin" : "Sign in",
+    "skip_login" : "Skip log in",
+    "welcome_back" :"Welcome back!",
+    "you_have_been_missed" : "You have been missed",
+    "phone_number" : "Phone Number",
+    "password" : "Password",
+    "forget_password" : "Forgot Password?",
+    "no_account" : "Don't have an account?",
+    "signup" : "Sign Up"
+}

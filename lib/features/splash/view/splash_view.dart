@@ -45,11 +45,11 @@ class _SplashViewState extends State<SplashView> {
             curve: Curves.decelerate,
             left: animate ? 60.h : -1000,
             right: 40.w,
-            bottom: 210.w,
+            bottom: 190.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 48.h),
+                SizedBox(height: 68.h),
                 Image.asset(AssetsData.hiddenLogo, fit: BoxFit.cover),
               ],
             ),
@@ -57,13 +57,14 @@ class _SplashViewState extends State<SplashView> {
           AnimatedPositioned(
             duration: const Duration(milliseconds: 3000),
             curve: Curves.decelerate,
-            bottom: animate ? 130.h : -1000,
+            bottom: animate ? 100.h : -1000,
             right: 40.w,
-            left: 70.w,
+            left: 66.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 RichText(
+                  textAlign: TextAlign.center,
                   text: TextSpan(children: [
                     TextSpan(
                       text: 'Say hello',
@@ -79,8 +80,9 @@ class _SplashViewState extends State<SplashView> {
                 ),
                 SizedBox(height: 48.h),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(width: 54.w),
                     Text(
                       'Powered by  ',
                       style: TextStyles.textstyle10.copyWith(

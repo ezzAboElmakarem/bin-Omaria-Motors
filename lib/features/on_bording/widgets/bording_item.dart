@@ -1,5 +1,6 @@
-import 'dart:developer';
-
+import 'package:bin_omaira_motors/features/welcome_Screen/view/welcome_view.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../helper/text_styles.dart';
@@ -28,7 +29,6 @@ Widget buildBordingItem(BordingModel model, {required int currentIndex}) =>
           right: 24.w,
           child: Text(
             model.body,
-            // textAlign: TextAlign.left,
             textScaler: TextScaler.noScaling,
             style: TextStyles.textstyle16.copyWith(
               color: Colors.white.withOpacity(.6),
@@ -40,16 +40,15 @@ Widget buildBordingItem(BordingModel model, {required int currentIndex}) =>
         Positioned(
           bottom: 74.h,
           // left: 24.w,
-          right: 20.w,
+          right: 15.w,
           child: GestureDetector(
             onTap: () {
-              log('message');
+              RouteUtils.navigateAndPopAll(const WelcomeView());
             },
             child: Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(26.0),
               child: Text(
-                'Skip intro',
-                // textAlign: TextAlign.left,
+                'skip_intro'.tr(),
                 textScaler: TextScaler.noScaling,
                 style: TextStyles.textstyle12
                     .copyWith(color: Colors.white.withOpacity(.6)),

@@ -4,6 +4,7 @@ class AssetsData {
   static const logo = 'assets/images/logo.svg';
   static const splashPic = 'assets/images/splash_pic.svg';
   static const splashImage = 'assets/images/splash_image.png';
+  static const loginImage = 'assets/images/login_image.png';
   static const splashScreen = 'assets/images/splash_screen.png';
   static const hiddenLogo = 'assets/images/hidden_logo.png';
   static const onBording1 = 'assets/images/on_bording_1.png';
