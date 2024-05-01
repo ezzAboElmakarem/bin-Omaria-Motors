@@ -10,4 +10,7 @@ class AssetsData {
   static const onBording1 = 'assets/images/on_bording_1.png';
   static const onBording2 = 'assets/images/on_bording_2.png';
   static const onBording3 = 'assets/images/on_bording_3.png';
+  static const phone = 'assets/images/phone.png';
+  static const successfullRegister = 'assets/images/successfull_register.png';
+  static const newPassSuccess = 'assets/images/new_pass_success.png';
 }

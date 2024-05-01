@@ -8,5 +8,5 @@ class ColorStyles {
   static Color redColor = const Color(0xffC2000B);
   static Color greenColor = const Color(0xff4CBD6B);
   static Color greyColor = const Color(0xffF0F0F0);
-  static Color darkgreyColor = const Color(0xff6B7274);
+  static Color darkgreyColor = Colors.white.withOpacity(0.6);
 }

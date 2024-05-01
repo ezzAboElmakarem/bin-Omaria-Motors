@@ -51,6 +51,7 @@ class _SplashViewState extends State<SplashView> {
               children: [
                 SizedBox(height: 68.h),
                 Image.asset(AssetsData.hiddenLogo, fit: BoxFit.cover),
+                SizedBox(height: 20.h),
               ],
             ),
           ),

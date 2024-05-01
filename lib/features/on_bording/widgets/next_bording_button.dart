@@ -39,10 +39,14 @@ class NextBordingButton extends StatelessWidget {
           backgroundColor: kPrimaryColor.withOpacity(0.2),
           circularStrokeCap: CircularStrokeCap.round,
           percent: (currentIndex + 1) / onbordingItems.length,
-          center: const CircleAvatar(
+          center: CircleAvatar(
               radius: 28,
               backgroundColor: kPrimaryColor,
-              child: Icon(Icons.arrow_forward_ios)),
+              child: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.white,
+                size: 16.sp,
+              )),
           progressColor: const Color(0xff397989),
         ),
       ),

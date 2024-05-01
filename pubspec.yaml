@@ -45,6 +45,8 @@ dependencies:
   flutter_image_compress: ^2.2.0
   simple_animations: ^5.0.2
   percent_indicator: ^4.2.3
+  country_code_picker: ^3.0.0
+  pinput: ^4.0.0
 
 dev_dependencies:
   flutter_test:

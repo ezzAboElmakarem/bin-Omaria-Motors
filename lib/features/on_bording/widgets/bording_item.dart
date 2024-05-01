@@ -38,9 +38,9 @@ Widget buildBordingItem(BordingModel model, {required int currentIndex}) =>
           ),
         ),
         Positioned(
-          bottom: 74.h,
+          bottom: 44.h,
           // left: 24.w,
-          right: 15.w,
+          right: 10.w,
           child: GestureDetector(
             onTap: () {
               RouteUtils.navigateAndPopAll(const WelcomeView());

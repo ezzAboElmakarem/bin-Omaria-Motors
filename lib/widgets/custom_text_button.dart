@@ -22,7 +22,7 @@ class CustomTextButton extends StatelessWidget {
         text,
         style: TextStyles.textstyle16.copyWith(
             color: textColor ?? kPrimaryColor,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.normal,
             fontSize: fontSize ?? 16.sp),
       ),
     );

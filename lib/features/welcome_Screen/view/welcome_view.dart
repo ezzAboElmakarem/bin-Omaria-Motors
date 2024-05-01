@@ -27,7 +27,7 @@ class WelcomeView extends StatelessWidget {
                   children: [
                     Text(
                       'skip_login'.tr(),
-                      style: TextStyles.textstyle14.copyWith(
+                      style: TextStyles.textstyle12.copyWith(
                           fontWeight: FontWeight.w100, color: Colors.white),
                     ),
                     SizedBox(
@@ -38,7 +38,7 @@ class WelcomeView extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.white,
-                          size: 16.sp,
+                          size: 14.sp,
                         )),
                   ],
                 ),

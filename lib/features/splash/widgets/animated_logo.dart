@@ -44,7 +44,7 @@ class AnimationLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlayAnimationBuilder<double>(
       tween: Tween(begin: 100.0, end: 200.0),
-      duration: const Duration(seconds: 6),
+      duration: const Duration(seconds: 5),
       curve: Curves.fastOutSlowIn,
       builder: (context, value, _) {
         return SizedBox(
