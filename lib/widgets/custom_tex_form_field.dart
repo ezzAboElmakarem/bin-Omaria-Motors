@@ -63,8 +63,7 @@ class CustomTextFormField extends StatelessWidget {
         validator: validation,
         keyboardType: type,
         decoration: InputDecoration(
-          contentPadding:
-              EdgeInsets.symmetric(horizontal: 10.w, vertical: 18.h),
+          contentPadding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
           labelText: labelText,
           labelStyle: TextStyles.textstyle14
               .copyWith(color: Colors.white.withOpacity(0.6)),

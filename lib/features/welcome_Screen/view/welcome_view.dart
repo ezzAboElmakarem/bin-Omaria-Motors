@@ -1,6 +1,8 @@
+import 'package:bin_omaira_motors/features/main_pages/navigation_bar_view.dart';
 import 'package:bin_omaira_motors/features/welcome_Screen/widgets/welcome_screen_buttons.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -22,25 +24,28 @@ class WelcomeView extends StatelessWidget {
                 SizedBox(
                   height: 64.h,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'skip_login'.tr(),
-                      style: TextStyles.textstyle12.copyWith(
-                          fontWeight: FontWeight.w100, color: Colors.white),
-                    ),
-                    SizedBox(
-                      width: 8.w,
-                    ),
-                    GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.white,
-                          size: 14.sp,
-                        )),
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    RouteUtils.navigateAndPopUntilFirstPage(const NavBarView());
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'skip_login'.tr(),
+                        style: TextStyles.textstyle12.copyWith(
+                            fontWeight: FontWeight.w100, color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                        size: 14.sp,
+                      ),
+                    ],
+                  ),
                 ),
                 Image.asset(
                   AssetsData.loginImage,

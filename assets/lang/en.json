@@ -35,5 +35,20 @@
     "continue" : "Continue",
     "terms_and_conditions" : "terms & conditions",
     "successfully_registered" : "Successfully Registered",
-    "successfully_registered_subtitle" : "Your account has been registered succesfully, now let's enjoy Car features!"
+    "successfully_registered_subtitle" : "Your account has been registered succesfully, now let's enjoy Car features!",
+    "hello" : "Hello",
+    "Welcome_text" : "Let's find you an awesome vehicle",
+    "search_text ": "What you looking for? ",
+    "advet_title" : "The Best Car",
+    "advert_body_text":"Here are some of the best cars this year",
+    "read_me" : "Read More",
+    "recommendations" :"Recommendations",
+    "see_all":"See all",
+    "before":"Before",
+    "currence" : "SAR" ,
+    "home" : "Home",
+    "search" :"Search",
+    "orders" : "Orders",
+    "more" : "More"
+
 }

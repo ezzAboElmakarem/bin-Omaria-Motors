@@ -1,5 +1,5 @@
+import 'package:bin_omaira_motors/features/main_pages/navigation_bar_view.dart';
 import 'package:bin_omaira_motors/features/success_screen/views/success_screen_view.dart';
-import 'package:bin_omaira_motors/features/welcome_Screen/view/welcome_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
@@ -21,7 +21,7 @@ class RegisterButton extends StatelessWidget {
                 image: AssetsData.successfullRegister,
                 text1: "successfully_registered".tr(),
                 text2: "successfully_registered_subtitle".tr(),
-                widget: const WelcomeView(),
+                widget: const NavBarView(),
                 textButton: 'continue'.tr()),
           );
         });

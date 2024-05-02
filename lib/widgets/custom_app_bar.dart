@@ -12,17 +12,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leading,
     this.title,
     this.actions,
+    this.appBarColor,
+    this.iconColor,
   }) : super(key: key);
 
   final BuildContext context;
   final Widget? leading;
   final String? title;
   final List<Widget>? actions;
+  final Color? appBarColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.black,
+      backgroundColor: appBarColor ?? Colors.black,
       leading: leading ??
           IconButton(
             onPressed: () {
@@ -30,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             },
             icon: Icon(
               Icons.arrow_back_ios_new,
-              color: Colors.white,
+              color: iconColor ?? Colors.white,
               size: 16.sp,
             ),
           ),

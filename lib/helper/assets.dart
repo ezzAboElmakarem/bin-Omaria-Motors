@@ -13,4 +13,13 @@ class AssetsData {
   static const phone = 'assets/images/phone.png';
   static const successfullRegister = 'assets/images/successfull_register.png';
   static const newPassSuccess = 'assets/images/new_pass_success.png';
+  static const home = 'assets/images/home_image.png';
+  static const search = 'assets/images/search.png';
+  static const cart = 'assets/images/cart.png';
+  static const more = 'assets/images/more_image.png';
+  static const cardImage = 'assets/images/card_image.png';
+  static const filter = 'assets/images/filter.png';
+  static const car = 'assets/images/car_image.png';
+  static const tesla = 'assets/images/tesla_logo.png';
+  static const tesla2 = 'assets/images/tesla.png';
 }
