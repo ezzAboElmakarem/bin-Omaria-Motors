@@ -45,7 +45,7 @@ class _SplashViewState extends State<SplashView> {
             curve: Curves.decelerate,
             left: animate ? 60.h : -1000,
             right: 40.w,
-            bottom: 190.w,
+            bottom: 170.w,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

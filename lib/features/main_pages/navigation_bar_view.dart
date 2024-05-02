@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/search/views/search_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
@@ -18,12 +19,18 @@ class NavBarViewState extends State<NavBarView> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeView(),
-    const SearchScreen(),
+    const SearchView(),
     const OrdersScreen(),
     const MoreScreen(),
   ];
 
-  void _onItemTapped(int index) {
+  void navigateToSearchScreen() {
+    setState(() {
+      _selectedIndex = 1; // Index 1 represents the search screen
+    });
+  }
+
+  void onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -42,7 +49,7 @@ class NavBarViewState extends State<NavBarView> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: kPrimaryColor,
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        onTap: onItemTapped,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(
@@ -87,34 +94,6 @@ class NavBarViewState extends State<NavBarView> {
         ],
         selectedIconTheme: const IconThemeData(
             color: kPrimaryColor), // Define selected icon color
-      ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Home Screen',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Search Screen',
-        style: TextStyle(fontSize: 24),
       ),
     );
   }

@@ -1,4 +1,6 @@
+import 'package:bin_omaira_motors/features/all_cars/views/all_cars_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_product_card.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -23,7 +25,9 @@ class RecommendationSection extends StatelessWidget {
               ),
               const Spacer(),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const AllCarsView());
+                },
                 child: Text(
                   'see_all'.tr(),
                   style: TextStyles.textstyle12.copyWith(

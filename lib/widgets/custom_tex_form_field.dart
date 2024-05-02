@@ -49,82 +49,102 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 327.w,
-      child: TextFormField(
-        textAlign: textAlign ?? TextAlign.start,
+      child: Column(
+        children: [
+          title == null
+              ? const SizedBox.shrink()
+              : Row(
+                  //textdirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8.h),
+                      child: Text(title ?? '',
+                          style: TextStyles.textstyle16.copyWith(
+                              color: titleColor, fontWeight: FontWeight.w500)),
+                    ),
+                  ],
+                ),
+          TextFormField(
+            textAlign: textAlign ?? TextAlign.start,
 
-        enabled: isEnabled,
-        maxLines: maxLines ?? 1,
-        style: TextStyle(
-            fontWeight: FontWeight.w500, color: Colors.white, fontSize: 14.sp),
-        //textdirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
-        obscureText: ispassword,
-        onChanged: onChange,
-        controller: controller,
-        validator: validation,
-        keyboardType: type,
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
-          labelText: labelText,
-          labelStyle: TextStyles.textstyle14
-              .copyWith(color: Colors.white.withOpacity(0.6)),
-          //  contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-          errorStyle: TextStyle(
-              color: errorColor, fontSize: 14, fontWeight: FontWeight.bold),
-          hintStyle: TextStyle(
-            fontSize: 14.sp,
-            fontWeight: FontWeight.normal,
-            color: hintColor ?? Colors.white.withOpacity(0.6),
-          ),
-          // hintTextDirection:
-          //     TextDirection.rtl : TextDirection.ltr,
-          prefixText: prefixText,
-          prefixStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 18.sp,
-              fontWeight: FontWeight.bold),
-          filled: true,
-          fillColor: fillColor ?? const Color(0x0fffffff),
-          hintText: hint,
+            enabled: isEnabled,
+            maxLines: maxLines ?? 1,
+            style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+                fontSize: 14.sp),
+            //textdirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
+            obscureText: ispassword,
+            onChanged: onChange,
+            controller: controller,
+            validator: validation,
+            keyboardType: type,
+            decoration: InputDecoration(
+              contentPadding:
+                  EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
+              labelText: labelText,
+              labelStyle: TextStyles.textstyle14
+                  .copyWith(color: Colors.white.withOpacity(0.6)),
+              //  contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+              errorStyle: TextStyle(
+                  color: errorColor, fontSize: 14, fontWeight: FontWeight.bold),
+              hintStyle: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.normal,
+                color: hintColor ?? Colors.white.withOpacity(0.6),
+              ),
+              // hintTextDirection:
+              //     TextDirection.rtl : TextDirection.ltr,
+              prefixText: prefixText,
+              prefixStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.bold),
+              filled: true,
+              fillColor: fillColor ?? const Color(0x0fffffff),
+              hintText: hint,
 
-          prefixIcon: prefixIcon,
-          suffixIcon: suffixIcon,
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: borderColor ?? Colors.white,
-              width: 0.8.w,
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(24),
+              prefixIcon: prefixIcon,
+              suffixIcon: suffixIcon,
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: borderColor ?? Colors.white,
+                  width: 0.8.w,
+                ),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: borderColor ?? Colors.grey,
+                  width: 0.8.w,
+                ),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              disabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: borderColor ?? Colors.grey,
+                  width: 0.8.w,
+                ),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(12),
+                ),
+              ),
+              border: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: borderColor ?? Colors.grey,
+                  width: 0.5.w,
+                ),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(24),
+                ),
+              ),
             ),
           ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: borderColor ?? Colors.grey,
-              width: 0.8.w,
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(24),
-            ),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: borderColor ?? Colors.grey,
-              width: 0.8.w,
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(24),
-            ),
-          ),
-          border: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: borderColor ?? Colors.grey,
-              width: 0.5.w,
-            ),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(24),
-            ),
-          ),
-        ),
+        ],
       ),
     );
   }

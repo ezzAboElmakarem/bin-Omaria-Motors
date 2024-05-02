@@ -24,27 +24,31 @@ class WelcomeView extends StatelessWidget {
                 SizedBox(
                   height: 64.h,
                 ),
-                GestureDetector(
+                InkWell(
                   onTap: () {
                     RouteUtils.navigateAndPopUntilFirstPage(const NavBarView());
                   },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'skip_login'.tr(),
-                        style: TextStyles.textstyle12.copyWith(
-                            fontWeight: FontWeight.w100, color: Colors.white),
-                      ),
-                      SizedBox(
-                        width: 8.w,
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                        size: 14.sp,
-                      ),
-                    ],
+                  child: SizedBox(
+                    height: 40.h,
+                    // width: 100.w,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'skip_login'.tr(),
+                          style: TextStyles.textstyle12.copyWith(
+                              fontWeight: FontWeight.w100, color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 8.w,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 14.sp,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Image.asset(

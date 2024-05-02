@@ -38,7 +38,7 @@
     "successfully_registered_subtitle" : "Your account has been registered succesfully, now let's enjoy Car features!",
     "hello" : "Hello",
     "Welcome_text" : "Let's find you an awesome vehicle",
-    "search_text ": "What you looking for? ",
+    "search_text": "What you looking for? ",
     "advet_title" : "The Best Car",
     "advert_body_text":"Here are some of the best cars this year",
     "read_me" : "Read More",
@@ -50,6 +50,14 @@
     "search" :"Search",
     "orders" : "Orders",
     "more" : "More",
-    "notifications": "Notifications"
+    "notifications": "Notifications",
+    "all_cars": "All cars",
+    "search_filter" : "Search Filter",
+    "car_type" : "Car type",
+    "model" :"Model",
+    "year" : "Year" ,
+    "color" : "Color",
+    "cofirm_filter" :"Confirm filters",
+    "clear_filter" : "Clear filters"
 
 }
