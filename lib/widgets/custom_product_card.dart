@@ -46,7 +46,7 @@ class ProductDetails extends StatelessWidget {
           width: 44.w,
           height: 44.w,
           decoration: BoxDecoration(
-            color: kPrimaryColor.withOpacity(0.2),
+            color: kPrimaryColor.withOpacity(0.1),
             borderRadius: BorderRadius.circular(13),
           ),
           child: Center(

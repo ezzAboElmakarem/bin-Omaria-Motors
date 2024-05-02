@@ -14,6 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.appBarColor,
     this.iconColor,
+    this.titleStyle,
   }) : super(key: key);
 
   final BuildContext context;
@@ -22,11 +23,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final Color? appBarColor;
   final Color? iconColor;
+  final TextStyle? titleStyle;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: appBarColor ?? Colors.black,
+      centerTitle: true,
       leading: leading ??
           IconButton(
             onPressed: () {
@@ -38,7 +41,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               size: 16.sp,
             ),
           ),
-      title: Text(title ?? ''),
+      title: Text(
+        title ?? '',
+        style: titleStyle,
+      ),
       actions: actions,
     );
   }

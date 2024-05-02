@@ -49,6 +49,7 @@
     "home" : "Home",
     "search" :"Search",
     "orders" : "Orders",
-    "more" : "More"
+    "more" : "More",
+    "notifications": "Notifications"
 
 }

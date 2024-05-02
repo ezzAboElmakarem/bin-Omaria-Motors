@@ -22,4 +22,5 @@ class AssetsData {
   static const car = 'assets/images/car_image.png';
   static const tesla = 'assets/images/tesla_logo.png';
   static const tesla2 = 'assets/images/tesla.png';
+  static const notificationIcon = 'assets/images/notification_icon.png';
 }
