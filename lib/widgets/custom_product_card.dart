@@ -14,7 +14,7 @@ class CustomProductCard extends StatelessWidget {
       width: 244.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.black.withOpacity(0.6), width: 0.3)),
+          border: Border.all(color: Colors.grey.withOpacity(0.4), width: 1)),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
         child: Column(

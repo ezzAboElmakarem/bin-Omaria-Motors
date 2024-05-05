@@ -18,25 +18,30 @@ class CarTypeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        height: 90.h,
-        width: 124.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isSelected ? kPrimaryColor : Colors.grey.withOpacity(0.3),
+      child: Material(
+        elevation: isSelected ? 6.0 : 0.0,
+        shadowColor: kPrimaryColor,
+        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          height: 90.h,
+          width: 124.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: isSelected ? kPrimaryColor : Colors.grey.withOpacity(0.3),
+            ),
+            image: const DecorationImage(
+              image: AssetImage(AssetsData.bentleyLogo),
+            ),
           ),
-          image: const DecorationImage(
-            image: AssetImage(AssetsData.bentleyLogo),
-          ),
-        ),
-        child: Align(
-          alignment: Alignment.bottomCenter,
-          child: Text(
-            'Bentley',
-            style: TextStyles.textstyle14.copyWith(
-              fontWeight: FontWeight.normal,
-              color: ColorStyles.blackColor,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Text(
+              'Bentley',
+              style: TextStyles.textstyle14.copyWith(
+                fontWeight: FontWeight.normal,
+                color: ColorStyles.blackColor,
+              ),
             ),
           ),
         ),

@@ -47,6 +47,7 @@ dependencies:
   percent_indicator: ^4.2.3
   country_code_picker: ^3.0.0
   pinput: ^4.0.0
+  lottie: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,7 @@ flutter:
     - assets/images/
     - assets/lang/ar.json
     - assets/lang/en.json
+    - assets/animations/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

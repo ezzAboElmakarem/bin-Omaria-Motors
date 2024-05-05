@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/search/views/search_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
@@ -20,7 +21,7 @@ class NavBarViewState extends State<NavBarView> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeView(),
     const SearchView(),
-    const OrdersScreen(),
+    const OrdersView(),
     const MoreScreen(),
   ];
 

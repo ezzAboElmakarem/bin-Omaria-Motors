@@ -58,6 +58,26 @@
     "year" : "Year" ,
     "color" : "Color",
     "cofirm_filter" :"Confirm filters",
-    "clear_filter" : "Clear filters"
+    "clear_filter" : "Clear filters",
+    "no_cars_found" : "No vehicles found",
+    "empty_result_subtitle" : "Please try to search another vehicles or apply different sorting filters",
+    "new_purchase" : "New purchase",
+    "declined_reservation" : "Declined reservation",
+    "accepted_purchase" : "Accepted purchase",
+    "order_id" : "Order id",
+    "car_number" : "Car number",
+    "order_details" : "Order details",
+    "car_details" : "Car details",
+    "car_price" : "Car price",
+    "value_added_tax" : "value added tax",
+    "registration_fee" : "Registration fee",
+    "delivery_fee"  : "Delivery fee" ,
+    "total_price" : "Total price" ,
+    "deposit" : "Deposit" ,
+    "amount_remaining" :  "Amount remaining",
+    "attatchments" : "Attatchments",
+    "receipt" : "Receipt",
+    "sale_contract" : "Sale contract",
+    "case_of_order_rejection" : "Cause of order rejection"
 
 }
