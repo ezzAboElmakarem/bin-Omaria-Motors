@@ -1,4 +1,7 @@
 import 'package:bin_omaira_motors/features/order_details/views/order_details_view.dart';
+import 'package:bin_omaira_motors/features/orders/widgets/accepted_state_widget.dart';
+import 'package:bin_omaira_motors/features/orders/widgets/declined_state_widget.dart';
+import 'package:bin_omaira_motors/features/orders/widgets/new_purchase_widget.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';
@@ -8,8 +11,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomOrderProductCard extends StatelessWidget {
-  const CustomOrderProductCard({super.key});
-
+  const CustomOrderProductCard({super.key, this.orderState});
+  final String? orderState;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,7 +33,9 @@ class CustomOrderProductCard extends StatelessWidget {
               padding: EdgeInsets.only(top: 16.h, left: 16.w, right: 16.w),
               child: Column(
                 children: [
-                  const ProductState(),
+                  ProductState(
+                    orderState: orderState,
+                  ),
                   SizedBox(height: 4.h),
                   Center(child: Image.asset(AssetsData.car)),
                   SizedBox(height: 12.h),
@@ -151,42 +156,18 @@ class ProductDetails extends StatelessWidget {
 }
 
 class ProductState extends StatelessWidget {
+  final String? orderState;
   const ProductState({
     super.key,
+    this.orderState,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 100.w,
-          height: 32.h,
-          decoration: BoxDecoration(
-              color: Colors.grey[300], borderRadius: BorderRadius.circular(12)),
-          child: Center(
-            child: Text(
-              'new_purchase'.tr(),
-              style: TextStyles.textstyle12.copyWith(
-                  color: ColorStyles.blackColor, fontWeight: FontWeight.normal),
-            ),
-          ),
-        ),
-        const Spacer(),
-        Container(
-          width: 86.w,
-          height: 32.w,
-          decoration: BoxDecoration(
-            color: kPrimaryColor.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(13),
-          ),
-          child: Center(
-            child: Text("${'90,000'} ${'currence'.tr()}",
-                style: TextStyles.textstyle10.copyWith(
-                    color: kPrimaryColor, fontWeight: FontWeight.bold)),
-          ),
-        ),
-      ],
-    );
+    return orderState == "accepted_purchase".tr()
+        ? const AcceptedState()
+        : orderState == "declined_reservation".tr()
+            ? const DeclinedState()
+            : const NewPurchaseState();
   }
 }
