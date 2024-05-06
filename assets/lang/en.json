@@ -78,6 +78,11 @@
     "attatchments" : "Attatchments",
     "receipt" : "Receipt",
     "sale_contract" : "Sale contract",
-    "case_of_order_rejection" : "Cause of order rejection"
+    "case_of_order_rejection" : "Cause of order rejection",
+    "description" : "Description",
+    "specifications" : "Specifications",
+    "measurments" : "Measurments",
+    "purchase" : "Purchase",
+    "without_vat" : "without vat"
 
 }

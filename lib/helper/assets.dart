@@ -28,4 +28,7 @@ class AssetsData {
   static const emptyResult = 'assets/images/empty_result.png';
   static const file1 = 'assets/images/file_1.png';
   static const file2 = 'assets/images/file_2.png';
+  static const telephone = 'assets/images/telephone.png';
+  static const escape = 'assets/images/escape.png';
+  static const bigCar = 'assets/images/big_car.png';
 }

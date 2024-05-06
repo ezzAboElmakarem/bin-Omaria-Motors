@@ -23,8 +23,7 @@ class OrdersView extends StatelessWidget {
             padding: EdgeInsets.all(24.h),
             child: ListView.separated(
                 itemBuilder: (context, index) => CustomOrderProductCard(
-                    // orderState: "declined_reservation".tr(),
-                    ),
+                    orderState: "accepted_purchase".tr()),
                 separatorBuilder: (context, index) => SizedBox(height: 16.h),
                 itemCount: 6)),
       ),

@@ -1,7 +1,7 @@
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
-import 'package:bin_omaira_motors/widgets/custom_product_card.dart';
+import 'package:bin_omaira_motors/widgets/custom_car_card.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +41,7 @@ class AllCarsView extends StatelessWidget {
           // shrinkWrap: true,
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
           physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => const CustomProductCard(),
+          itemBuilder: (context, index) => const CustomCarCard(),
           separatorBuilder: (context, index) => SizedBox(height: 16.w),
           itemCount: 14),
     );
