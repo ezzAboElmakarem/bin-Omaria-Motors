@@ -1,4 +1,6 @@
+import 'package:bin_omaira_motors/features/purchase/views/purchase_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -20,53 +22,58 @@ class CarDetailsButtons extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 54.h,
-              width: 328.w,
-              decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(12)),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w),
-                child: Row(
-                  children: [
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(children: [
-                        TextSpan(
-                          text: "119.000 ${'currence'.tr()}  ",
-                          style: TextStyles.textstyle16
-                              .copyWith(color: Colors.white),
-                        ),
-                        TextSpan(
-                          text: 'without_vat'.tr(),
-                          style: TextStyles.textstyle12
-                              .copyWith(color: Colors.white.withOpacity(0.8)),
-                        ),
-                      ]),
-                    ),
-                    SizedBox(
-                      width: 34.w,
-                    ),
-                    VerticalDivider(
-                      endIndent: 8.h,
-                      indent: 8.h,
-                    ),
-                    const Spacer(),
-                    Text(
-                      'purchase'.tr(),
-                      style:
-                          TextStyles.textstyle12.copyWith(color: Colors.white),
-                    ),
-                    SizedBox(
-                      width: 8.w,
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.white,
-                      size: 11.sp,
-                    ),
-                  ],
+            GestureDetector(
+              onTap: () {
+                RouteUtils.navigateTo(const PurchaseView());
+              },
+              child: Container(
+                height: 54.h,
+                width: 328.w,
+                decoration: BoxDecoration(
+                    color: kPrimaryColor,
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: Row(
+                    children: [
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: TextSpan(children: [
+                          TextSpan(
+                            text: "119.000 ${'currence'.tr()}  ",
+                            style: TextStyles.textstyle16
+                                .copyWith(color: Colors.white),
+                          ),
+                          TextSpan(
+                            text: 'without_vat'.tr(),
+                            style: TextStyles.textstyle12
+                                .copyWith(color: Colors.white.withOpacity(0.8)),
+                          ),
+                        ]),
+                      ),
+                      SizedBox(
+                        width: 34.w,
+                      ),
+                      VerticalDivider(
+                        endIndent: 8.h,
+                        indent: 8.h,
+                      ),
+                      const Spacer(),
+                      Text(
+                        'purchase'.tr(),
+                        style: TextStyles.textstyle12
+                            .copyWith(color: Colors.white),
+                      ),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: Colors.white,
+                        size: 11.sp,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

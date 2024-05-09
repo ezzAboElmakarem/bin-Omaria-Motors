@@ -18,7 +18,7 @@ class CustomOrderProductCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         RouteUtils.navigateTo(OrderDetailsView(
-          orderState: "accepted_purchase".tr(),
+          orderState: orderState,
         ));
       },
       child: Container(

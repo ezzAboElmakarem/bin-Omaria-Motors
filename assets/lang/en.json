@@ -83,6 +83,23 @@
     "specifications" : "Specifications",
     "measurments" : "Measurments",
     "purchase" : "Purchase",
-    "without_vat" : "without vat"
+    "without_vat" : "without vat",
+    "summary" :"Summary",
+    "shipping" : "Shipping",
+    "payment" : "Payment",
+    "next" : "Next",
+    "order_summary" : "Order summary",
+    "personal_details" : "Personal details",
+    "full_name" : "Full name",
+    "shipping_details" : "Shipping details",
+    "branch" : "Branch",
+    "home_delivery":"Home delivery",
+    "city" : "City",
+    "detailed_adress" : "Detailed adress",
+    "required_uploads" : "Required uploads",
+    "bank_transfer_receipt" : "Bank transfer receipt*",
+    "id_photo" :  "Id photo*",
+    "driving_license" : "Driving license*" ,
+    "agency_file" :  "Agency file" 
 
 }

@@ -38,7 +38,7 @@ class CarDetailsView extends StatelessWidget {
             const DescriptionSection(),
             SizedBox(height: 16.h),
             const MeasurmentsListView(),
-            // SizedBox(height: 100.h),
+            SizedBox(height: 24.h),
           ],
         ),
       ),
