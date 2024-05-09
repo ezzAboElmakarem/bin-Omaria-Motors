@@ -6,25 +6,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SuccessScreenView extends StatelessWidget {
-  final String image, text1, text2, textButton;
-  final Widget widget;
-  const SuccessScreenView(
-      {super.key,
-      required this.image,
-      required this.text1,
-      required this.text2,
-      required this.widget,
-      required this.textButton});
+  final String image, texttitle, textSubtitle, textButton;
+  final Widget navTo;
+  final Color? backgroundColor,
+      textTitleColor,
+      textSubtitleColor,
+      buttonColor,
+      textButtonColor;
+  const SuccessScreenView({
+    super.key,
+    required this.image,
+    required this.texttitle,
+    required this.textSubtitle,
+    required this.navTo,
+    required this.textButton,
+    this.backgroundColor,
+    this.textTitleColor,
+    this.textSubtitleColor,
+    this.buttonColor,
+    this.textButtonColor,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundColor ?? Colors.black,
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 30.h),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
                 image,
@@ -32,20 +43,23 @@ class SuccessScreenView extends StatelessWidget {
                 width: 327.w,
               ),
               Text(
-                text1,
-                style: TextStyles.textstyle24.copyWith(color: Colors.white),
+                texttitle,
+                style: TextStyles.textstyle24
+                    .copyWith(color: textTitleColor ?? Colors.white),
               ),
               SizedBox(height: 8.h),
               Text(
-                text2,
-                style: TextStyles.textstyle12
-                    .copyWith(color: ColorStyles.darkgreyColor),
+                textSubtitle,
+                style: TextStyles.textstyle12.copyWith(
+                    color: textSubtitleColor ?? ColorStyles.darkgreyColor),
               ),
               SizedBox(height: 40.h),
               CustomButton(
                 buttonText: textButton,
+                buttonColor: buttonColor,
+                textColor: textButtonColor,
                 onTap: () {
-                  RouteUtils.navigateAndPopUntilFirstPage(widget);
+                  RouteUtils.navigateAndPopUntilFirstPage(navTo);
                 },
               ),
             ],

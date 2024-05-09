@@ -18,9 +18,9 @@ class NewPassConfirmButton extends StatelessWidget {
       onTap: () {
         RouteUtils.navigateTo(SuccessScreenView(
           image: AssetsData.newPassSuccess,
-          text1: 'new_pass_done_title'.tr(),
-          text2: 'new_pass_done_subtitle'.tr(),
-          widget: const SignInView(),
+          texttitle: 'new_pass_done_title'.tr(),
+          textSubtitle: 'new_pass_done_subtitle'.tr(),
+          navTo: const SignInView(),
           textButton: 'back_to_login'.tr(),
         ));
       },

@@ -1,9 +1,9 @@
-import 'dart:developer';
-
+import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/first_step_content.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/second_step_content.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/third_step_content.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -23,7 +23,7 @@ class _PurchaseStepperState extends State<PurchaseStepper> {
   onStepContinue() {
     final isLastStep = currentStep == getSteps().length - 1;
     if (isLastStep) {
-      log("compelete");
+      RouteUtils.navigateTo(const MyAccoountView());
     } else {
       setState(() {
         currentStep += 1;

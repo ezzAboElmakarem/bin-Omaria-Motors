@@ -100,6 +100,10 @@
     "bank_transfer_receipt" : "Bank transfer receipt*",
     "id_photo" :  "Id photo*",
     "driving_license" : "Driving license*" ,
-    "agency_file" :  "Agency file" 
+    "agency_file" :  "Agency file" ,
+    "my_account" : "My Account",
+    "purchase_success_title" : "Purchase request sent successfully",
+    "purchase_success_subtitle" : "Your request was sent successfully, we will contact you within 24 hours",
+    "my_orders" : "My Orders"
 
 }

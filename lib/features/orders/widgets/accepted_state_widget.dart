@@ -17,7 +17,7 @@ class AcceptedState extends StatelessWidget {
           // width: 100.w,
           height: 32.h,
           decoration: BoxDecoration(
-              color: const Color(0xffEDF8F0),
+              color: ColorStyles.lightBlueColor,
               borderRadius: BorderRadius.circular(12)),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.w),

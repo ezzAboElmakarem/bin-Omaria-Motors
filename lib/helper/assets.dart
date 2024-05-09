@@ -34,4 +34,5 @@ class AssetsData {
   static const door = 'assets/images/door.png';
   static const building = 'assets/images/building.png';
   static const nationalBank = 'assets/images/National_Bank.png';
+  static const flyingCar = 'assets/images/flying_car.png';
 }

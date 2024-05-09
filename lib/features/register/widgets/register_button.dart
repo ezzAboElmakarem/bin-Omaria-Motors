@@ -19,9 +19,9 @@ class RegisterButton extends StatelessWidget {
           RouteUtils.navigateTo(
             SuccessScreenView(
                 image: AssetsData.successfullRegister,
-                text1: "successfully_registered".tr(),
-                text2: "successfully_registered_subtitle".tr(),
-                widget: const NavBarView(),
+                texttitle: "successfully_registered".tr(),
+                textSubtitle: "successfully_registered_subtitle".tr(),
+                navTo: const NavBarView(),
                 textButton: 'continue'.tr()),
           );
         });
