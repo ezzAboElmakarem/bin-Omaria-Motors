@@ -35,4 +35,14 @@ class AssetsData {
   static const building = 'assets/images/building.png';
   static const nationalBank = 'assets/images/National_Bank.png';
   static const flyingCar = 'assets/images/flying_car.png';
+  static const branches = 'assets/images/branches.png';
+  static const faqs = 'assets/images/faqs.png';
+  static const language = 'assets/images/language.png';
+  static const logoIcon = 'assets/images/logo_icon.png';
+  static const policy = 'assets/images/policy.png';
+  static const services = 'assets/images/services.png';
+  static const user = 'assets/images/user.png';
+  static const terms = 'assets/images/terms.png';
+  static const bluePhone = 'assets/images/call.png';
+  static const logOut = 'assets/images/log_out.png';
 }

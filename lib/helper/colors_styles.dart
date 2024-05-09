@@ -28,6 +28,7 @@ class ColorStyles {
   static Color signInButtonColor = const Color(0xff333E41);
   static Color redColor = const Color(0xffC2000B);
   static Color greenColor = const Color(0xff4CBD6B);
+  static Color shadowColor = const Color(0xffF5F5F5);
   static Color lightBlueColor = const Color(0xffEDF8F0);
   static Color greyColor = const Color(0xffD9D9D9).withOpacity(0.2);
   static Color darkgreyColor = Colors.white.withOpacity(0.6);

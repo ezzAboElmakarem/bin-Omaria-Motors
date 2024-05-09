@@ -2,6 +2,7 @@ import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/success_screen/views/success_screen_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -30,6 +31,9 @@ class MyAccoountView extends StatelessWidget {
         textSubtitleColor: Colors.black.withOpacity(0.7),
         buttonColor: kPrimaryColor.withOpacity(0.1),
         textButtonColor: kPrimaryColor,
+        ontap: () {
+          RouteUtils.navigateTo(const OrdersView());
+        },
         navTo: const OrdersView(),
       ),
     );
