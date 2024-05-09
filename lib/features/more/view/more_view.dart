@@ -1,5 +1,6 @@
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
+import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -96,6 +97,9 @@ class MoreView extends StatelessWidget {
                 isLogOut: true,
                 sectionTitle: "log_out".tr(),
                 sectionImage: AssetsData.logOut,
+                backgroundColor: Colors.red[100],
+                textColor: ColorStyles.redColor,
+                iconColor: ColorStyles.redColor,
                 onTap: () {},
                 navigationButton: true,
               ),
