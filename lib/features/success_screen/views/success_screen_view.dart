@@ -13,6 +13,7 @@ class SuccessScreenView extends StatelessWidget {
       textSubtitleColor,
       buttonColor,
       textButtonColor;
+  final void Function()? ontap;
   const SuccessScreenView({
     super.key,
     required this.image,
@@ -25,6 +26,7 @@ class SuccessScreenView extends StatelessWidget {
     this.textSubtitleColor,
     this.buttonColor,
     this.textButtonColor,
+    this.ontap,
   });
 
   @override
@@ -58,9 +60,10 @@ class SuccessScreenView extends StatelessWidget {
                 buttonText: textButton,
                 buttonColor: buttonColor,
                 textColor: textButtonColor,
-                onTap: () {
-                  RouteUtils.navigateAndPopUntilFirstPage(navTo);
-                },
+                onTap: ontap ??
+                    () {
+                      RouteUtils.navigateAndPopUntilFirstPage(navTo);
+                    },
               ),
             ],
           ),

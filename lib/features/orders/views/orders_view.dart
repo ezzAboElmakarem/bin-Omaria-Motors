@@ -19,13 +19,12 @@ class OrdersView extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Padding(
+        child: ListView.separated(
             padding: EdgeInsets.all(24.h),
-            child: ListView.separated(
-                itemBuilder: (context, index) => CustomOrderProductCard(
-                    orderState: "accepted_purchase".tr()),
-                separatorBuilder: (context, index) => SizedBox(height: 16.h),
-                itemCount: 6)),
+            itemBuilder: (context, index) =>
+                CustomOrderProductCard(orderState: "accepted_purchase".tr()),
+            separatorBuilder: (context, index) => SizedBox(height: 16.h),
+            itemCount: 6),
       ),
     );
   }

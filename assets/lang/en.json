@@ -104,6 +104,16 @@
     "my_account" : "My Account",
     "purchase_success_title" : "Purchase request sent successfully",
     "purchase_success_subtitle" : "Your request was sent successfully, we will contact you within 24 hours",
-    "my_orders" : "My Orders"
+    "my_orders" : "My Orders",
+    "change_language" : "Change language",
+    "about_us" : "About Us",
+    "after_sale_services" : "After sale services",
+    "our_branches" : "Our branches",
+    "terms_&_Conditions" :"Terms & Conditions",
+    "usage_policy" : "Usage Policy",
+    "faqs" : "FAQs" ,
+    "contact_us" : "Contact Us",
+    "log_out" : "Log out"
+    
 
 }

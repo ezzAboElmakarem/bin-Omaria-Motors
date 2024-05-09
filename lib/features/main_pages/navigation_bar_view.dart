@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/more/view/more_view.dart';
 import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/search/views/search_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
@@ -22,7 +23,7 @@ class NavBarViewState extends State<NavBarView> {
     const HomeView(),
     const SearchView(),
     const OrdersView(),
-    const MoreScreen(),
+    const MoreView(),
   ];
 
   void navigateToSearchScreen() {
@@ -95,34 +96,6 @@ class NavBarViewState extends State<NavBarView> {
         ],
         selectedIconTheme: const IconThemeData(
             color: kPrimaryColor), // Define selected icon color
-      ),
-    );
-  }
-}
-
-class OrdersScreen extends StatelessWidget {
-  const OrdersScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Orders Screen',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class MoreScreen extends StatelessWidget {
-  const MoreScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'More Screen',
-        style: TextStyle(fontSize: 24),
       ),
     );
   }
