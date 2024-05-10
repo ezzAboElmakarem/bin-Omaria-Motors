@@ -50,4 +50,5 @@ class AssetsData {
   static const ourMission = 'assets/images/our_mission.png';
   static const ourVision = 'assets/images/our_vision.png';
   static const ourValues = 'assets/images/our_values.png';
+  static const fix = 'assets/images/fix.png';
 }

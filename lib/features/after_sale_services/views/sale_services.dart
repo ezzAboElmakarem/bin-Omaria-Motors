@@ -1,20 +1,19 @@
-import 'package:bin_omaira_motors/features/our_branches/widgets/branch_details.dart';
-import 'package:bin_omaira_motors/helper/assets.dart';
+import 'package:bin_omaira_motors/features/after_sale_services/widgets/service_deatils.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class OurBranchesView extends StatelessWidget {
-  const OurBranchesView({super.key});
+class AfterSaleServicesView extends StatelessWidget {
+  const AfterSaleServicesView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
         context: context,
-        title: "our_branches".tr(),
+        title: "after_sale_services".tr(),
         titleStyle: TextStyles.textstyle14.copyWith(
           color: Colors.white,
         ),
@@ -26,21 +25,17 @@ class OurBranchesView extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Image.asset(AssetsData.blueLogo),
-              SizedBox(height: 32.h),
               ListView.separated(
                   shrinkWrap: true,
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.symmetric(vertical: 32.h),
-                  itemBuilder: (context, index) => const BranchDetails(
-                        branchName: "Bin omira branch 1",
-                        address: "5th street, Dammam, saudi arabi",
-                        email: "5th street, Dammam, saudi arabi",
-                        phone: "5th street, Dammam, saudi arabi",
-                        workTime: "5th street, Dammam, saudi arabi",
+                  itemBuilder: (context, index) => const ServiceDetails(
+                        serviceName: "service 1",
+                        serviceDetails:
+                            "Lorem ipsum dolor sit amet, adipiscing elit, se sed do eiusmod tempor incididunt sed do..",
                       ),
                   separatorBuilder: (context, index) => SizedBox(height: 16.h),
-                  itemCount: 5),
+                  itemCount: 7),
             ],
           ),
         ),
