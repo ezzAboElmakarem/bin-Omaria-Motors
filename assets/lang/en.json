@@ -113,7 +113,9 @@
     "usage_policy" : "Usage Policy",
     "faqs" : "FAQs" ,
     "contact_us" : "Contact Us",
-    "log_out" : "Log out"
-    
+    "log_out" : "Log out",
+    "change_password" : "Change password",
+    "save_changes" : "Save changes",
+    "delete_account" : "Delete account"
 
 }

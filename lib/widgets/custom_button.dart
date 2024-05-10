@@ -12,9 +12,11 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.height,
     this.buttonColor,
+    this.borderColor,
   });
   final String buttonText;
   final Color? textColor;
+  final Color? borderColor;
   final Color? buttonColor;
   final VoidCallback onTap;
   final double? width;
@@ -28,7 +30,8 @@ class CustomButton extends StatelessWidget {
         width: width ?? 327.w,
         decoration: BoxDecoration(
           color: buttonColor ?? kPrimaryColor,
-          //     border: Border.all(color: ColorStyles.greyColor),
+          border:
+              Border.all(color: borderColor ?? buttonColor ?? kPrimaryColor),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(

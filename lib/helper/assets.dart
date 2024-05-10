@@ -45,4 +45,5 @@ class AssetsData {
   static const terms = 'assets/images/terms.png';
   static const bluePhone = 'assets/images/call.png';
   static const logOut = 'assets/images/log_out.png';
+  static const userImage = 'assets/images/user_image.png';
 }

@@ -1,6 +1,8 @@
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
+import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -29,7 +31,9 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "my_account".tr(),
                 sectionImage: AssetsData.user,
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const MyAccountView());
+                },
                 navigationButton: true,
               ),
               SizedBox(
@@ -97,7 +101,7 @@ class MoreView extends StatelessWidget {
                 isLogOut: true,
                 sectionTitle: "log_out".tr(),
                 sectionImage: AssetsData.logOut,
-                backgroundColor: Colors.red[100],
+                backgroundColor: Colors.red.withOpacity(0.1),
                 textColor: ColorStyles.redColor,
                 iconColor: ColorStyles.redColor,
                 onTap: () {},
