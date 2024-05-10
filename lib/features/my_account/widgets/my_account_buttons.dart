@@ -1,4 +1,6 @@
+import 'package:bin_omaira_motors/features/change_password/views/change_pass_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -15,7 +17,9 @@ class MyAccountButtons extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            RouteUtils.navigateTo(const ChangePassView());
+          },
           child: Container(
             padding: EdgeInsets.all(16.h),
             decoration: BoxDecoration(
@@ -45,6 +49,7 @@ class MyAccountButtons extends StatelessWidget {
         CustomButton(
           buttonText: "save_changes".tr(),
           buttonColor: kPrimaryColor.withOpacity(0.1),
+          borderColor: kPrimaryColor.withOpacity(0.1),
           textColor: kPrimaryColor,
           onTap: () {},
         ),

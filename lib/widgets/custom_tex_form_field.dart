@@ -24,11 +24,15 @@ class CustomTextFormField extends StatelessWidget {
       this.validation,
       required this.ispassword,
       required this.isEnabled,
-      this.maxLines});
+      this.maxLines,
+      this.labelColor,
+      this.textColor});
   TextEditingController? controller;
   TextInputType? type;
+  final Color? textColor;
   String? hint;
   String? labelText;
+  final Color? labelColor;
   final String? title;
   Color? titleColor = Colors.black;
   Color? fillColor = const Color(0xffEFEFEF);
@@ -71,7 +75,7 @@ class CustomTextFormField extends StatelessWidget {
             maxLines: maxLines ?? 1,
             style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: textColor ?? Colors.black,
                 fontSize: 14.sp),
             //textdirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
             obscureText: ispassword,
@@ -84,7 +88,7 @@ class CustomTextFormField extends StatelessWidget {
                   EdgeInsets.symmetric(horizontal: 10.w, vertical: 0.h),
               labelText: labelText,
               labelStyle: TextStyles.textstyle14
-                  .copyWith(color: Colors.white.withOpacity(0.6)),
+                  .copyWith(color: labelColor ?? Colors.white.withOpacity(0.6)),
               //  contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
               errorStyle: TextStyle(
                   color: errorColor, fontSize: 14, fontWeight: FontWeight.bold),

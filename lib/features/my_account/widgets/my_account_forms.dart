@@ -19,6 +19,7 @@ class MyAccountForms extends StatelessWidget {
           isEnabled: true,
           hint: "name".tr(),
           hintColor: ColorStyles.blackColor.withOpacity(0.6),
+          borderColor: Colors.grey,
           suffixIcon: Icon(
             Icons.person,
             color: ColorStyles.blackColor.withOpacity(0.6),
@@ -30,6 +31,7 @@ class MyAccountForms extends StatelessWidget {
         CustomTextFormField(
           ispassword: false,
           isEnabled: true,
+          borderColor: Colors.grey,
           hint: "email".tr(),
           hintColor: ColorStyles.blackColor.withOpacity(0.6),
           suffixIcon: Icon(
@@ -43,6 +45,7 @@ class MyAccountForms extends StatelessWidget {
         CustomTextFormField(
           ispassword: false,
           isEnabled: true,
+          borderColor: Colors.grey,
           hint: "phone".tr(),
           hintColor: ColorStyles.blackColor.withOpacity(0.6),
           suffixIcon: Image.asset(
