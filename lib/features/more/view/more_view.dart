@@ -3,6 +3,7 @@ import 'package:bin_omaira_motors/features/change_language/views/change_lang_vie
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/features/our_branches/views/our_branches_view.dart';
+import 'package:bin_omaira_motors/features/terms_and_condtions/views/terms_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';
@@ -82,7 +83,9 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "terms_&_Conditions".tr(),
                 sectionImage: AssetsData.policy,
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const TermsAndConditionsView());
+                },
                 navigationButton: true,
               ),
               SizedBox(height: 2.h),
