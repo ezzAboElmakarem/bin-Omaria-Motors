@@ -41,13 +41,10 @@ class MoreSectionItem extends StatelessWidget {
             SizedBox(
               width: 6.w,
             ),
-            SizedBox(
-              width: 140.w,
-              child: Text(
-                sectionTitle,
-                style: TextStyles.textstyle14.copyWith(
-                    color: isLogOut == null ? Colors.black : textColor),
-              ),
+            Text(
+              sectionTitle,
+              style: TextStyles.textstyle14
+                  .copyWith(color: isLogOut == null ? Colors.black : textColor),
             ),
             const Spacer(),
             navigationButton
