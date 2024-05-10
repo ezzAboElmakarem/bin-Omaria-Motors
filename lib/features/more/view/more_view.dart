@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:bin_omaira_motors/features/change_language/views/change_lang_view.dart';
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
@@ -42,7 +45,10 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "change_language".tr(),
                 sectionImage: AssetsData.language,
-                onTap: () {},
+                onTap: () {
+                  // log('message');
+                  RouteUtils.navigateTo(const ChangeLanguage());
+                },
                 navigationButton: true,
               ),
               SizedBox(

@@ -116,6 +116,7 @@
     "log_out" : "Log out",
     "change_password" : "Change password",
     "save_changes" : "Save changes",
-    "delete_account" : "Delete account"
+    "delete_account" : "Delete account",
+    "change_lang" : "Change Language"
 
 }
