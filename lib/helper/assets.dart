@@ -46,4 +46,8 @@ class AssetsData {
   static const bluePhone = 'assets/images/call.png';
   static const logOut = 'assets/images/log_out.png';
   static const userImage = 'assets/images/user_image.png';
+  static const blueLogo = 'assets/images/blue_logo.png';
+  static const ourMission = 'assets/images/our_mission.png';
+  static const ourVision = 'assets/images/our_vision.png';
+  static const ourValues = 'assets/images/our_values.png';
 }

@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:bin_omaira_motors/features/about_us/views/about_us_view.dart';
 import 'package:bin_omaira_motors/features/change_language/views/change_lang_view.dart';
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
@@ -57,7 +56,9 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "about_us".tr(),
                 sectionImage: AssetsData.logoIcon,
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const AboutUsView());
+                },
                 navigationButton: true,
               ),
               SizedBox(height: 2.h),

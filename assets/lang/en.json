@@ -117,6 +117,10 @@
     "change_password" : "Change password",
     "save_changes" : "Save changes",
     "delete_account" : "Delete account",
-    "change_lang" : "Change Language"
+    "change_lang" : "Change Language",
+    "our_mission" : "Our mission",
+    "our_vision" : "Our vision",
+    "our_values" : "Our values"
+
 
 }
