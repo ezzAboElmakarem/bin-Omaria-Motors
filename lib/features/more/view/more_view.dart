@@ -1,6 +1,7 @@
 import 'package:bin_omaira_motors/features/about_us/views/about_us_view.dart';
 import 'package:bin_omaira_motors/features/after_sale_services/views/sale_services.dart';
 import 'package:bin_omaira_motors/features/change_language/views/change_lang_view.dart';
+import 'package:bin_omaira_motors/features/faq/views/faq_view.dart';
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/features/our_branches/views/our_branches_view.dart';
@@ -105,7 +106,9 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "faqs".tr(),
                 sectionImage: AssetsData.faqs,
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const FaqView());
+                },
                 navigationButton: true,
               ),
               SizedBox(height: 2.h),

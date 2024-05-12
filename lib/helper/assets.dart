@@ -51,4 +51,7 @@ class AssetsData {
   static const ourVision = 'assets/images/our_vision.png';
   static const ourValues = 'assets/images/our_values.png';
   static const fix = 'assets/images/fix.png';
+  static const plus = 'assets/images/plus.png';
+  static const minimize = 'assets/images/minimize.png';
+  static const bigPlus = 'assets/images/big_plus.png';
 }
