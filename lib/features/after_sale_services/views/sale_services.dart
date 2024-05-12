@@ -30,10 +30,9 @@ class AfterSaleServicesView extends StatelessWidget {
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.symmetric(vertical: 32.h),
                   itemBuilder: (context, index) => const ServiceDetails(
-                        serviceName: "service 1",
-                        serviceDetails:
-                            "Lorem ipsum dolor sit amet, adipiscing elit, se sed do eiusmod tempor incididunt sed do..",
-                      ),
+                      serviceName: "service 1",
+                      serviceDetails:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum .."),
                   separatorBuilder: (context, index) => SizedBox(height: 16.h),
                   itemCount: 7),
             ],
