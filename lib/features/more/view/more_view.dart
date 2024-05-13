@@ -1,6 +1,7 @@
 import 'package:bin_omaira_motors/features/about_us/views/about_us_view.dart';
 import 'package:bin_omaira_motors/features/after_sale_services/views/sale_services.dart';
 import 'package:bin_omaira_motors/features/change_language/views/change_lang_view.dart';
+import 'package:bin_omaira_motors/features/contact_us/views/contact_us_view.dart';
 import 'package:bin_omaira_motors/features/faq/views/faq_view.dart';
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
 import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
@@ -87,7 +88,7 @@ class MoreView extends StatelessWidget {
               SizedBox(height: 2.h),
               MoreSectionItem(
                 sectionTitle: "terms_&_Conditions".tr(),
-                sectionImage: AssetsData.policy,
+                sectionImage: AssetsData.terms,
                 onTap: () {
                   RouteUtils.navigateTo(const TermsAndConditionsView());
                 },
@@ -115,7 +116,9 @@ class MoreView extends StatelessWidget {
               MoreSectionItem(
                 sectionTitle: "contact_us".tr(),
                 sectionImage: AssetsData.bluePhone,
-                onTap: () {},
+                onTap: () {
+                  RouteUtils.navigateTo(const ContactUsView());
+                },
                 navigationButton: true,
               ),
               SizedBox(height: 22.h),

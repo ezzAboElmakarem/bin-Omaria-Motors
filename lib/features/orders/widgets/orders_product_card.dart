@@ -11,15 +11,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomOrderProductCard extends StatelessWidget {
-  const CustomOrderProductCard({super.key, this.orderState});
+  const CustomOrderProductCard(
+      {super.key, this.orderState, required this.clickable});
   final String? orderState;
+  final bool clickable;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        RouteUtils.navigateTo(OrderDetailsView(
-          orderState: orderState,
-        ));
+        clickable
+            ? RouteUtils.navigateTo(OrderDetailsView(
+                orderState: orderState,
+              ))
+            : null;
       },
       child: Container(
         decoration: BoxDecoration(

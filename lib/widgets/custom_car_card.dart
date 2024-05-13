@@ -8,13 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCarCard extends StatelessWidget {
-  const CustomCarCard({super.key});
+  final bool clickable;
+  const CustomCarCard({super.key, required this.clickable});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        RouteUtils.navigateTo(const CarDetailsView());
+        clickable ? RouteUtils.navigateTo(const CarDetailsView()) : null;
       },
       child: Container(
         width: 244.w,

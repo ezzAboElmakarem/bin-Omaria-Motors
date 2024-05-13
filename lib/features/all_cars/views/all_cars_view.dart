@@ -41,7 +41,7 @@ class AllCarsView extends StatelessWidget {
           // shrinkWrap: true,
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
           physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => const CustomCarCard(),
+          itemBuilder: (context, index) => const CustomCarCard(clickable: true),
           separatorBuilder: (context, index) => SizedBox(height: 16.w),
           itemCount: 14),
     );

@@ -2,6 +2,7 @@ import 'package:bin_omaira_motors/core/AppStorage.dart';
 import 'package:bin_omaira_motors/features/on_bording/widgets/next_bording_button.dart';
 import 'package:bin_omaira_motors/features/on_bording/models/onbording_model.dart';
 import 'package:bin_omaira_motors/features/on_bording/widgets/bording_item.dart';
+import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:flutter/material.dart';
 
 class OnBordingView extends StatefulWidget {
@@ -24,6 +25,7 @@ class _OnBordingViewState extends State<OnBordingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorStyles.blackColor,
       body: Stack(
         children: [
           SizedBox(

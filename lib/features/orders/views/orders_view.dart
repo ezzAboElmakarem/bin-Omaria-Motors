@@ -21,8 +21,8 @@ class OrdersView extends StatelessWidget {
       body: Center(
         child: ListView.separated(
             padding: EdgeInsets.all(24.h),
-            itemBuilder: (context, index) =>
-                CustomOrderProductCard(orderState: "accepted_purchase".tr()),
+            itemBuilder: (context, index) => CustomOrderProductCard(
+                orderState: "accepted_purchase".tr(), clickable: true),
             separatorBuilder: (context, index) => SizedBox(height: 16.h),
             itemCount: 6),
       ),

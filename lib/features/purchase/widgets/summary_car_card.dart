@@ -1,7 +1,5 @@
-import 'package:bin_omaira_motors/features/car_details/views/car_details_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -12,27 +10,22 @@ class SummaryCarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        RouteUtils.navigateTo(const CarDetailsView());
-      },
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey.withOpacity(0.4), width: 1)),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const ProductPrices(),
-              SizedBox(height: 4.h),
-              Center(child: Image.asset(AssetsData.car)),
-              SizedBox(height: 12.h),
-              const ProductDetails(),
-            ],
-          ),
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.grey.withOpacity(0.4), width: 1)),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const ProductPrices(),
+            SizedBox(height: 4.h),
+            Center(child: Image.asset(AssetsData.car)),
+            SizedBox(height: 12.h),
+            const ProductDetails(),
+          ],
         ),
       ),
     );

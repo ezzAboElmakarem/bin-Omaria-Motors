@@ -36,7 +36,7 @@ class OrderDetailsView extends StatelessWidget {
               SizedBox(
                 height: 24.h,
               ),
-              CustomOrderProductCard(orderState: orderState),
+              CustomOrderProductCard(orderState: orderState, clickable: false),
               SizedBox(
                 height: 24.h,
               ),

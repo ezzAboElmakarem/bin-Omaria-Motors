@@ -1,8 +1,10 @@
-import 'package:bin_omaira_motors/features/main_pages/navigation_bar_view.dart';
+import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
+import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_tex_form_field.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeSearchField extends StatelessWidget {
@@ -16,9 +18,11 @@ class HomeSearchField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24.w),
       child: GestureDetector(
         onTap: () {
-          (context as Element)
-              .findAncestorStateOfType<NavBarViewState>()
-              ?.navigateToSearchScreen();
+          RouteUtils.context.read<NavBarCubit>().changeView(1);
+          // RouteUtils.navigateTo(const NavBarView());
+          // (context as Element)
+          //     .findAncestorStateOfType<NavBarViewState>()
+          //     ?.navigateToSearchScreen();
         },
         child: Row(
           children: [

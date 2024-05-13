@@ -120,7 +120,13 @@
     "change_lang" : "Change Language",
     "our_mission" : "Our mission",
     "our_vision" : "Our vision",
-    "our_values" : "Our values"
+    "our_values" : "Our values",
+    "contact_number" :"Contact Number",
+    "find_us" : "Find us on social media",
+    "contact_us_form" : "Contact us form",
+    "your_msg" : "Your Message",
+    "submit" : "Submit" ,
+    "email_address" : "Email Address"
 
 
 }

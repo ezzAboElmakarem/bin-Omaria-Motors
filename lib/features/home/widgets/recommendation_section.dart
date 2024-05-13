@@ -49,7 +49,9 @@ class RecommendationSection extends StatelessWidget {
               // shrinkWrap: true,
               padding: EdgeInsets.symmetric(horizontal: 12.w),
               physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) => const CustomCarCard(),
+              itemBuilder: (context, index) => const CustomCarCard(
+                    clickable: true,
+                  ),
               separatorBuilder: (context, index) => SizedBox(width: 16.w),
               itemCount: 14),
         ),

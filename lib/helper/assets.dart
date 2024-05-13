@@ -54,4 +54,11 @@ class AssetsData {
   static const plus = 'assets/images/plus.png';
   static const minimize = 'assets/images/minimize.png';
   static const bigPlus = 'assets/images/big_plus.png';
+  static const facebook = 'assets/images/facebook.png';
+  static const twitter = 'assets/images/twitter.png';
+  static const insta = 'assets/images/insta.png';
+  static const whatsUp = 'assets/images/whats_up.png';
+  static const snap = 'assets/images/snap.png';
+  static const youtube = 'assets/images/you_tube.png';
+  static const linkedin = 'assets/images/linked_in.png';
 }
