@@ -14,6 +14,7 @@ class OrdersView extends StatelessWidget {
       appBar: CustomAppBar(
         context: context,
         title: "orders".tr(),
+        leading: const SizedBox.shrink(),
         titleStyle: TextStyles.textstyle14.copyWith(
           color: Colors.white,
         ),

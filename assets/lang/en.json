@@ -126,7 +126,19 @@
     "contact_us_form" : "Contact us form",
     "your_msg" : "Your Message",
     "submit" : "Submit" ,
-    "email_address" : "Email Address"
-
+    "email_address" : "Email Address",
+    "arabic" : "Arabic",
+    "english" : "English",
+    "say_hello" : "Say Hello",
+    "awesome_car" : " to your next awesome vehicle",
+    "powered_by" : "Powered by  ",
+    "saved_successfully" : "Saved successfully",
+    "changes_Saved" : "Change have been saved sucessfully",
+    "are_you_sure" : "Are you sure?",
+    "confirm_delete_subtitle" : "Are you sure you want to delete your account permanently?",
+    "confirm_delete" : "Confirm delete account",
+    "sign_in_first" : "Sign in first",
+    "sign_in_first_subtitle" :  "You should sign in first to resume purchase process",
+    "sign_out_ques" : "Are you sure you want to sign out from your account?"
 
 }

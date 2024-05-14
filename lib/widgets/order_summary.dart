@@ -19,37 +19,37 @@ class OrderSummary extends StatelessWidget {
           children: [
             PriceCell(
               name: "car_price".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "value_added_tax".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "registration_fee".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "delivery_fee".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "total_price".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "deposit".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: true,
             ),
             PriceCell(
               name: "amount_remaining".tr(),
-              price: "999 ",
+              price: "999  ${"currence".tr()}",
               showDivider: false,
             ),
           ],
@@ -82,9 +82,9 @@ class PriceCell extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              "$price ${"currence".tr()}",
+              "$price ",
               style:
-                  TextStyles.textstyle12.copyWith(fontWeight: FontWeight.w700),
+                  TextStyles.textstyle12.copyWith(fontWeight: FontWeight.w400),
             ),
           ],
         ),

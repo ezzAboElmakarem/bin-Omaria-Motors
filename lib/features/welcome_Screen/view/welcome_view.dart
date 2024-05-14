@@ -58,12 +58,12 @@ class WelcomeView extends StatelessWidget {
                   textAlign: TextAlign.center,
                   text: TextSpan(children: [
                     TextSpan(
-                      text: 'Say hello',
+                      text: 'say_hello'.tr(),
                       style:
                           TextStyles.textstyle24.copyWith(color: kPrimaryColor),
                     ),
                     TextSpan(
-                      text: ' to your next awesome vehicle',
+                      text: 'awesome_car'.tr(),
                       style:
                           TextStyles.textstyle24.copyWith(color: Colors.white),
                     ),

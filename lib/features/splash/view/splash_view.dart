@@ -3,6 +3,7 @@ import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_baground_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -68,12 +69,12 @@ class _SplashViewState extends State<SplashView> {
                   textAlign: TextAlign.center,
                   text: TextSpan(children: [
                     TextSpan(
-                      text: 'Say hello',
+                      text: 'say_hello'.tr(),
                       style:
                           TextStyles.textstyle24.copyWith(color: kPrimaryColor),
                     ),
                     TextSpan(
-                      text: ' to your next awesome vehicle',
+                      text: 'awesome_car'.tr(),
                       style:
                           TextStyles.textstyle24.copyWith(color: Colors.white),
                     ),
@@ -81,11 +82,11 @@ class _SplashViewState extends State<SplashView> {
                 ),
                 SizedBox(height: 48.h),
                 Row(
-                  // mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(width: 54.w),
                     Text(
-                      'Powered by  ',
+                      'powered_by'.tr(),
                       style: TextStyles.textstyle10.copyWith(
                           fontWeight: FontWeight.w200, color: Colors.grey),
                     ),

@@ -1,8 +1,9 @@
 import 'package:bin_omaira_motors/features/change_password/views/change_pass_view.dart';
+import 'package:bin_omaira_motors/features/my_account/widgets/delete_account_button.dart';
+import 'package:bin_omaira_motors/features/my_account/widgets/save_changes_button.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
-import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,23 +47,11 @@ class MyAccountButtons extends StatelessWidget {
         SizedBox(
           height: 84.h,
         ),
-        CustomButton(
-          buttonText: "save_changes".tr(),
-          buttonColor: kPrimaryColor.withOpacity(0.1),
-          borderColor: kPrimaryColor.withOpacity(0.1),
-          textColor: kPrimaryColor,
-          onTap: () {},
-        ),
+        const SaveChangesButton(),
         SizedBox(
           height: 16.h,
         ),
-        CustomButton(
-          buttonText: "delete_account".tr(),
-          buttonColor: Colors.red.withOpacity(0.12),
-          borderColor: ColorStyles.redColor,
-          textColor: ColorStyles.redColor,
-          onTap: () {},
-        ),
+        const DeleteAccountButton(),
       ],
     );
   }

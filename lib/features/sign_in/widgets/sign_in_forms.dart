@@ -28,6 +28,7 @@ class _SignInFormsState extends State<SignInForms> {
             ispassword: false,
             isEnabled: true,
             type: TextInputType.phone,
+            textColor: Colors.white,
             validation: Validator.phone,
             hint: 'phone_number'.tr(),
             labelText: 'phone_number'.tr(),
@@ -40,6 +41,7 @@ class _SignInFormsState extends State<SignInForms> {
           CustomTextFormField(
             ispassword: isPassword,
             isEnabled: true,
+            textColor: Colors.white,
             type: TextInputType.visiblePassword,
             validation: Validator.password,
             hint: 'password'.tr(),

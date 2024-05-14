@@ -9,9 +9,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/services.dart' as services;
+import 'package:get_storage/get_storage.dart';
+
+Locale currentLocale = const Locale('en', 'US');
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
+
   await Future.value([
     await EasyLocalization.ensureInitialized(),
   ]);

@@ -41,7 +41,7 @@ class _PurchaseStepperState extends State<PurchaseStepper> {
           textButtonColor: kPrimaryColor,
           ontap: () {
             RouteUtils.context.read<NavBarCubit>().changeView(2);
-            RouteUtils.navigateTo(const NavBarView());
+            RouteUtils.navigateAndPopAll(const NavBarView());
             // log('bnm,');
             // RouteUtils.navigateTo(const NavBarView());
 

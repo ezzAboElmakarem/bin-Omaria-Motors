@@ -28,6 +28,7 @@ class _RegisterFormsState extends State<RegisterForms> {
           isEnabled: true,
           type: TextInputType.name,
           validation: Validator.name,
+          textColor: Colors.white,
           hint: 'name'.tr(),
           labelText: 'name'.tr(),
           suffixIcon:
@@ -37,6 +38,7 @@ class _RegisterFormsState extends State<RegisterForms> {
         CustomTextFormField(
           ispassword: false,
           isEnabled: true,
+          textColor: Colors.white,
           type: TextInputType.emailAddress,
           validation: Validator.email,
           hint: 'email'.tr(),
@@ -48,6 +50,7 @@ class _RegisterFormsState extends State<RegisterForms> {
           ispassword: false,
           isEnabled: true,
           type: TextInputType.phone,
+          textColor: Colors.white,
           validation: Validator.phone,
           hint: 'phone_number'.tr(),
           labelText: 'phone_number'.tr(),
@@ -63,6 +66,7 @@ class _RegisterFormsState extends State<RegisterForms> {
           type: TextInputType.visiblePassword,
           validation: Validator.password,
           hint: 'password'.tr(),
+          textColor: Colors.white,
           labelText: 'password'.tr(),
           suffixIcon: IconButton(
             onPressed: () {
@@ -80,6 +84,7 @@ class _RegisterFormsState extends State<RegisterForms> {
           isEnabled: true,
           type: TextInputType.visiblePassword,
           validation: Validator.password,
+          textColor: Colors.white,
           hint: 'confirm_password'.tr(),
           labelText: 'confirm_password'.tr(),
           suffixIcon: IconButton(

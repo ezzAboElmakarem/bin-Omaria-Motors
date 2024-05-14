@@ -34,7 +34,7 @@ class RegisterView extends StatelessWidget {
                   width: double.infinity,
                 ),
                 Text(
-                  'Sign up'.tr(),
+                  'signup'.tr(),
                   style: TextStyles.textstyle24.copyWith(color: Colors.white),
                 ),
                 // SizedBox(height: 20.h),

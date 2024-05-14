@@ -18,7 +18,7 @@ class BankContainerItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 200.w,
+        width: 220.w,
         // height: 110.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),

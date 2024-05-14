@@ -61,4 +61,6 @@ class AssetsData {
   static const snap = 'assets/images/snap.png';
   static const youtube = 'assets/images/you_tube.png';
   static const linkedin = 'assets/images/linked_in.png';
+  static const enFlag = 'assets/images/en_flag.png';
+  static const successImage = 'assets/images/success_image.png';
 }

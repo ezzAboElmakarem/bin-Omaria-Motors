@@ -18,7 +18,7 @@ class CustomCarCard extends StatelessWidget {
         clickable ? RouteUtils.navigateTo(const CarDetailsView()) : null;
       },
       child: Container(
-        width: 244.w,
+        width: 250.w,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: Colors.grey.withOpacity(0.4), width: 1)),
@@ -30,7 +30,7 @@ class CustomCarCard extends StatelessWidget {
             children: [
               const ProductPrices(),
               SizedBox(height: 4.h),
-              Center(child: Image.asset(AssetsData.car)),
+              Expanded(child: Center(child: Image.asset(AssetsData.car))),
               SizedBox(height: 12.h),
               const ProductDetails(),
             ],
