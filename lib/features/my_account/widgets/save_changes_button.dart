@@ -24,28 +24,32 @@ class SaveChangesButton extends StatelessWidget {
           context: context,
           titleColor: Colors.white,
           verticalPadding: 160.h,
-          body: Column(
-            children: [
-              Image.asset(
-                AssetsData.successImage,
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              Text(
-                "saved_successfully".tr(),
-                style: TextStyles.textstyle16
-                    .copyWith(fontWeight: FontWeight.w500),
-              ),
-              Text(
-                "changes_Saved".tr(),
-                style: TextStyles.textstyle14
-                    .copyWith(fontWeight: FontWeight.normal),
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-            ],
+          body: Padding(
+            padding: EdgeInsets.symmetric(vertical: 8.h),
+            child: Column(
+              children: [
+                Image.asset(
+                  AssetsData.successImage,
+                ),
+                SizedBox(
+                  height: 24.h,
+                ),
+                Text(
+                  "saved_successfully".tr(),
+                  style: TextStyles.textstyle16
+                      .copyWith(fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  "changes_Saved".tr(),
+                  style: TextStyles.textstyle12.copyWith(
+                      fontWeight: FontWeight.normal,
+                      color: ColorStyles.blackColor.withOpacity(0.6)),
+                ),
+                SizedBox(
+                  height: 24.h,
+                ),
+              ],
+            ),
           ),
         );
       },

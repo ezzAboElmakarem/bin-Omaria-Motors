@@ -1,5 +1,4 @@
 import 'package:bin_omaira_motors/features/car_details/widgets/car_details_buttons.dart';
-import 'package:bin_omaira_motors/features/car_details/widgets/car_model_detail.dart';
 import 'package:bin_omaira_motors/features/car_details/widgets/car_photo_slider.dart';
 import 'package:bin_omaira_motors/features/car_details/widgets/car_shortcuts_details.dart';
 import 'package:bin_omaira_motors/features/car_details/widgets/description_section.dart';
@@ -15,6 +14,7 @@ class CarDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
         context: context,
         title: "Tesla",
@@ -31,8 +31,7 @@ class CarDetailsView extends StatelessWidget {
           children: [
             SizedBox(height: 36.h),
             const CarShortcutsDetails(),
-            SizedBox(height: 16.h),
-            const CarModel(),
+            // const CarModel(),
             const CarDetailsSwiper(),
             SizedBox(height: 16.h),
             const DescriptionSection(),

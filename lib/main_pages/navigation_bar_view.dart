@@ -1,6 +1,6 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_cubit.dart';
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_state.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_state.dart';
 import 'package:bin_omaira_motors/features/more/view/more_view.dart';
 import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/search/views/search_view.dart';

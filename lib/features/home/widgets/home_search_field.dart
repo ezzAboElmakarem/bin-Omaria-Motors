@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_cubit.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_tex_form_field.dart';

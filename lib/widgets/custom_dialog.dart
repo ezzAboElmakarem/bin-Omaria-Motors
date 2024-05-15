@@ -19,18 +19,14 @@ void cutsomDialog({
   showDialog(
     barrierDismissible: true,
     context: context,
-    builder: (context) => Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
-        vertical: verticalPadding ?? 180.h,
-      ),
+    builder: (context) => Dialog(
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
-          // mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(

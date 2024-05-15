@@ -37,13 +37,22 @@ class AllCarsView extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView.separated(
-          // shrinkWrap: true,
-          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
-          physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => const CustomCarCard(clickable: true),
-          separatorBuilder: (context, index) => SizedBox(height: 16.w),
-          itemCount: 14),
+      body:
+          // const CustomCarCard(clickable: true),
+          SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView.separated(
+                shrinkWrap: true,
+                padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
+                physics: const BouncingScrollPhysics(),
+                itemBuilder: (context, index) => Container(
+                    height: 210.h, child: const CustomCarCard(clickable: true)),
+                separatorBuilder: (context, index) => SizedBox(height: 16.w),
+                itemCount: 14),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/main_pages/navigation_bar_view.dart';
+import 'package:bin_omaira_motors/main_pages/navigation_bar_view.dart';
 import 'package:bin_omaira_motors/features/success_screen/views/success_screen_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/routes.dart';

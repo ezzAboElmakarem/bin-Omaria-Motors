@@ -25,7 +25,7 @@ class DeleteAccountButton extends StatelessWidget {
           titleColor: Colors.white,
           verticalPadding: 106.h,
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
+            padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
             child: Column(
               children: [
                 Image.asset(
@@ -33,9 +33,9 @@ class DeleteAccountButton extends StatelessWidget {
                   height: 180.h,
                   width: 180.w,
                 ),
-                SizedBox(
-                  height: 24.h,
-                ),
+                // SizedBox(
+                //   height: 24.h,
+                // ),
                 Text(
                   "are_you_sure".tr(),
                   style: TextStyles.textstyle16

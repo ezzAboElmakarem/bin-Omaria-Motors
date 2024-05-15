@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_state.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NavBarCubit extends Cubit<NavBarStates> {

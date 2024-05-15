@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_cubit.dart';
-import 'package:bin_omaira_motors/features/main_pages/navigation_bar_view.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
+import 'package:bin_omaira_motors/main_pages/navigation_bar_view.dart';
 import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/first_step_content.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/second_step_content.dart';
@@ -75,7 +75,7 @@ class _PurchaseStepperState extends State<PurchaseStepper> {
         currentStep: currentStep,
         type: StepperType.horizontal,
         steps: getSteps(),
-        onStepTapped: (step) => setState(() => currentStep = step),
+        // onStepTapped: (step) => setState(() => currentStep = step),
         onStepContinue: onStepContinue,
         onStepCancel: () {
           currentStep == 0 ? null : setState(() => currentStep -= 1);

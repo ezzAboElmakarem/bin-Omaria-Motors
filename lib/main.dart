@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/main_pages/cubit/nav_bar_cubit.dart';
+import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/keyboard_close_observer.dart';
