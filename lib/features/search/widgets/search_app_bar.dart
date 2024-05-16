@@ -1,7 +1,7 @@
-import 'package:bin_omaira_motors/features/search_filter/views/search_filter_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_tex_form_field.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +57,9 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           GestureDetector(
             onTap: () {
-              RouteUtils.navigateTo(const SearchFilterView());
+              CustomNavigator.push(Routes.SEARCHFILTER);
+
+              // RouteUtils.navigateTo(const SearchFilterView());
             },
             child: Container(
               height: 54.h,

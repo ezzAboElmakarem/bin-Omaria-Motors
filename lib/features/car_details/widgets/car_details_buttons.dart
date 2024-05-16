@@ -1,7 +1,7 @@
-import 'package:bin_omaira_motors/features/purchase/views/purchase_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +24,9 @@ class CarDetailsButtons extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                RouteUtils.navigateTo(const PurchaseView());
+                CustomNavigator.push(Routes.PURCHASE);
+
+                // RouteUtils.navigateTo(const PurchaseView());
               },
               child: Container(
                 height: 54.h,

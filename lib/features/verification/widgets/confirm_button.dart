@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/helper/routes.dart';
-import 'package:bin_omaira_motors/features/new_password/views/new_pass_view.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,9 @@ class ContinueButton extends StatelessWidget {
     return CustomButton(
       buttonText: 'confirm'.tr(),
       onTap: () {
-        RouteUtils.navigateTo(const NewPassWordView());
+        CustomNavigator.push(Routes.NEWPASSWORD);
+
+        // RouteUtils.navigateTo(const NewPasswordView());
       },
     );
   }

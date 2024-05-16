@@ -1,17 +1,9 @@
-import 'package:bin_omaira_motors/features/about_us/views/about_us_view.dart';
-import 'package:bin_omaira_motors/features/after_sale_services/views/sale_services.dart';
-import 'package:bin_omaira_motors/features/change_language/views/change_lang_view.dart';
-import 'package:bin_omaira_motors/features/contact_us/views/contact_us_view.dart';
-import 'package:bin_omaira_motors/features/faq/views/faq_view.dart';
 import 'package:bin_omaira_motors/features/more/widgets/more_section_item.dart';
-import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
-import 'package:bin_omaira_motors/features/our_branches/views/our_branches_view.dart';
-import 'package:bin_omaira_motors/features/terms_and_condtions/views/terms_view.dart';
-import 'package:bin_omaira_motors/features/usage_policy/views/usage_policy_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +32,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "my_account".tr(),
                 sectionImage: AssetsData.user,
                 onTap: () {
-                  RouteUtils.navigateTo(const MyAccountView());
+                  CustomNavigator.push(Routes.MYACCOUNT);
+
+                  // RouteUtils.navigateTo(const MyAccountView());
                 },
                 navigationButton: true,
               ),
@@ -52,7 +46,9 @@ class MoreView extends StatelessWidget {
                 sectionImage: AssetsData.language,
                 onTap: () {
                   // log('message');
-                  RouteUtils.navigateTo(const ChangeLanguage());
+                  CustomNavigator.push(Routes.CHNAGELANGUAGE);
+
+                  // RouteUtils.navigateTo(const ChangeLanguageView());
                 },
                 navigationButton: true,
               ),
@@ -63,7 +59,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "about_us".tr(),
                 sectionImage: AssetsData.logoIcon,
                 onTap: () {
-                  RouteUtils.navigateTo(const AboutUsView());
+                  CustomNavigator.push(Routes.ABOUTUS);
+
+                  // RouteUtils.navigateTo(const AboutUsView());
                 },
                 navigationButton: true,
               ),
@@ -72,7 +70,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "after_sale_services".tr(),
                 sectionImage: AssetsData.services,
                 onTap: () {
-                  RouteUtils.navigateTo(const AfterSaleServicesView());
+                  CustomNavigator.push(Routes.AFTERSALESERVICE);
+
+                  // RouteUtils.navigateTo(const AfterSaleServicesView());
                 },
                 navigationButton: true,
               ),
@@ -81,7 +81,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "our_branches".tr(),
                 sectionImage: AssetsData.branches,
                 onTap: () {
-                  RouteUtils.navigateTo(const OurBranchesView());
+                  CustomNavigator.push(Routes.OURBRANCHES);
+
+                  // RouteUtils.navigateTo(const OurBranchesView());
                 },
                 navigationButton: true,
               ),
@@ -90,7 +92,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "terms_&_Conditions".tr(),
                 sectionImage: AssetsData.terms,
                 onTap: () {
-                  RouteUtils.navigateTo(const TermsAndConditionsView());
+                  CustomNavigator.push(Routes.TERMSANDCONDITIONS);
+
+                  // RouteUtils.navigateTo(const TermsAndConditionsView());
                 },
                 navigationButton: true,
               ),
@@ -99,7 +103,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "usage_policy".tr(),
                 sectionImage: AssetsData.policy,
                 onTap: () {
-                  RouteUtils.navigateTo(const UsagePolicyView());
+                  CustomNavigator.push(Routes.USAGEPOLICY);
+
+                  // RouteUtils.navigateTo(const UsagePolicyView());
                 },
                 navigationButton: true,
               ),
@@ -108,7 +114,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "faqs".tr(),
                 sectionImage: AssetsData.faqs,
                 onTap: () {
-                  RouteUtils.navigateTo(const FaqView());
+                  CustomNavigator.push(Routes.FAQ);
+
+                  // RouteUtils.navigateTo(const FaqView());
                 },
                 navigationButton: true,
               ),
@@ -117,7 +125,9 @@ class MoreView extends StatelessWidget {
                 sectionTitle: "contact_us".tr(),
                 sectionImage: AssetsData.bluePhone,
                 onTap: () {
-                  RouteUtils.navigateTo(const ContactUsView());
+                  CustomNavigator.push(Routes.CONTACTUS);
+
+                  // RouteUtils.navigateTo(const ContactUsView());
                 },
                 navigationButton: true,
               ),

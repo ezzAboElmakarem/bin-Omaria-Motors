@@ -1,7 +1,7 @@
-import 'package:bin_omaira_motors/features/notification/views/notification_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,7 +36,9 @@ class WelcomeRow extends StatelessWidget {
           const Spacer(),
           GestureDetector(
             onTap: () {
-              RouteUtils.navigateTo(const NotificationView());
+              CustomNavigator.push(Routes.NOTIFICATIONS);
+
+              // RouteUtils.navigateTo(const NotificationView());
             },
             child: Container(
               width: 54.w,

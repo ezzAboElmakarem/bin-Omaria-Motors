@@ -1,6 +1,6 @@
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,7 +62,7 @@ class SuccessScreenView extends StatelessWidget {
                 textColor: textButtonColor,
                 onTap: ontap ??
                     () {
-                      RouteUtils.navigateAndPopUntilFirstPage(navTo);
+                      CustomNavigator.navigateAndPopUntilFirstPage(navTo);
                     },
               ),
             ],

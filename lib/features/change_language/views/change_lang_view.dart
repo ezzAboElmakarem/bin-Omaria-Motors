@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -11,14 +11,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
 
-class ChangeLanguage extends StatefulWidget {
-  const ChangeLanguage({super.key});
+class ChangeLanguageView extends StatefulWidget {
+  const ChangeLanguageView({super.key});
 
   @override
-  State<ChangeLanguage> createState() => _ChangeLanguageState();
+  State<ChangeLanguageView> createState() => _ChangeLanguageViewState();
 }
 
-class _ChangeLanguageState extends State<ChangeLanguage> {
+class _ChangeLanguageViewState extends State<ChangeLanguageView> {
   late String _selectedLocale;
   // ValueNotifier<int> selectedValue = ValueNotifier<int>(0);
 
@@ -28,7 +28,7 @@ class _ChangeLanguageState extends State<ChangeLanguage> {
   void initState() {
     _storage = GetStorage();
     _selectedLocale =
-        _storage.read('selectedLocale') ?? (RouteUtils.isAR ? "ar" : "en");
+        _storage.read('selectedLocale') ?? (CustomNavigator.isAR ? "ar" : "en");
     super.initState();
   }
 

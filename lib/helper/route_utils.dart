@@ -1,3 +1,4 @@
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,6 @@ class RouteUtils {
       MaterialPageRoute(builder: (_) => page);
 
   static bool get isAR {
-    return RouteUtils.context.locale.languageCode == 'ar';
+    return CustomNavigator.context.locale.languageCode == 'ar';
   }
 }

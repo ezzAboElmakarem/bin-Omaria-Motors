@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/after_sale_services/widgets/service_deatils.dart';
+import 'package:bin_omaira_motors/features/after_sale_services/widgets/service_deatils_item.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -29,7 +29,7 @@ class AfterSaleServicesView extends StatelessWidget {
                   shrinkWrap: true,
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.symmetric(vertical: 32.h),
-                  itemBuilder: (context, index) => const ServiceDetails(
+                  itemBuilder: (context, index) => const ServiceDetailsItem(
                       serviceName: "service 1",
                       serviceDetails:
                           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum .."),

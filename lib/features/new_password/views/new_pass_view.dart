@@ -7,8 +7,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class NewPassWordView extends StatelessWidget {
-  const NewPassWordView({super.key});
+class NewPasswordView extends StatelessWidget {
+  const NewPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {

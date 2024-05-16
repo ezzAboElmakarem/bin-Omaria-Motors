@@ -7,14 +7,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ServiceView extends StatelessWidget {
   final String serviceName, serviceDetails;
+  // final Map<String, dynamic> service;
   const ServiceView({
     super.key,
     required this.serviceName,
     required this.serviceDetails,
+    // required this.service,
   });
 
   @override
   Widget build(BuildContext context) {
+    // final map = ModalRoute.of(context)?.settings.arguments as Map;
     return Scaffold(
       appBar: CustomAppBar(
         context: context,
@@ -31,7 +34,9 @@ class ServiceView extends StatelessWidget {
             const ServiceImage(),
             SizedBox(height: 24.h),
             ServiceDescription(
-                serviceName: serviceName, serviceDetails: serviceDetails),
+              serviceName: serviceName,
+              serviceDetails: serviceDetails,
+            ),
           ],
         ),
       )),

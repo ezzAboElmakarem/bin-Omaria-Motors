@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/features/welcome_Screen/view/welcome_view.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,7 +43,9 @@ Widget buildBordingItem(BordingModel model, {required int currentIndex}) =>
           right: 10.w,
           child: GestureDetector(
             onTap: () {
-              RouteUtils.navigateAndPopAll(const WelcomeView());
+              CustomNavigator.push(Routes.WELCOME);
+
+              // RouteUtils.navigateAndPopAll(const WelcomeView());
             },
             child: Padding(
               padding: const EdgeInsets.all(26.0),

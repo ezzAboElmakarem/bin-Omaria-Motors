@@ -1,6 +1,6 @@
-import 'package:bin_omaira_motors/features/forget_password/views/forget_password_view.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:bin_omaira_motors/widgets/question_and_button.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -25,7 +25,9 @@ class SiginInButtons extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            RouteUtils.navigateTo(const ForgetPassView());
+            CustomNavigator.push(Routes.FORGOTPASSWORD);
+
+            // RouteUtils.navigateTo(const ForgetPassView());
           },
           child: Text(
             'forget_password?'.tr(),

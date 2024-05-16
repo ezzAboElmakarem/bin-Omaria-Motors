@@ -2,7 +2,7 @@ import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
 import 'package:bin_omaira_motors/helper/keyboard_close_observer.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:bin_omaira_motors/network/network_layer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -65,8 +65,10 @@ class MyApp extends StatelessWidget {
                     fontFamily: "Gotham",
                     useMaterial3: true,
                   ),
-                  navigatorKey: navigatorKey,
-                  onGenerateRoute: onGenerateRoute,
+                  // navigatorKey: navigatorKey,
+                  // onGenerateRoute: onGenerateRoute,
+                  onGenerateRoute: CustomNavigator.onCreateRoute,
+                  navigatorKey: CustomNavigator.navigatorState,
                   localizationsDelegates: context.localizationDelegates,
                   supportedLocales: const [
                     Locale('en'),

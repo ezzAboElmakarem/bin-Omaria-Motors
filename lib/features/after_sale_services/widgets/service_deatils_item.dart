@@ -1,14 +1,14 @@
-import 'package:bin_omaira_motors/features/service/views/services_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ServiceDetails extends StatelessWidget {
+class ServiceDetailsItem extends StatelessWidget {
   final String serviceName, serviceDetails;
-  const ServiceDetails({
+  const ServiceDetailsItem({
     super.key,
     required this.serviceName,
     required this.serviceDetails,
@@ -18,10 +18,14 @@ class ServiceDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        RouteUtils.navigateTo(ServiceView(
-          serviceName: serviceName,
-          serviceDetails: serviceDetails,
-        ));
+        CustomNavigator.push(Routes.SERVICE, arguments: {
+          "serviceName": serviceName,
+          "serviceDetails": serviceDetails,
+        });
+        // RouteUtils.navigateTo(ServiceView(
+        // serviceName: serviceName,
+        // serviceDetails: serviceDetails,
+        // ));
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 18.h),

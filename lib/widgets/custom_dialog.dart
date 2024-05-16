@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -53,7 +53,7 @@ void cutsomDialog({
                   const Spacer(),
                   GestureDetector(
                     onTap: () {
-                      RouteUtils.pop();
+                      CustomNavigator.pop();
                     },
                     child: const Icon(Icons.close),
                   ),

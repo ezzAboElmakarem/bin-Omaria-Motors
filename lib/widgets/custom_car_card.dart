@@ -1,8 +1,8 @@
-import 'package:bin_omaira_motors/features/car_details/views/car_details_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +15,11 @@ class CustomCarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        clickable ? RouteUtils.navigateTo(const CarDetailsView()) : null;
+        clickable
+            ? CustomNavigator.push(Routes.CARDETAILS)
+
+            //  RouteUtils.navigateTo(const CarDetailsView())
+            : null;
       },
       child: Container(
         width: 250.w,

@@ -1,6 +1,6 @@
-import 'package:bin_omaira_motors/features/search/views/empty_result_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,9 @@ class SearchFilterButtons extends StatelessWidget {
           CustomButton(
             buttonText: 'cofirm_filter'.tr(),
             onTap: () {
-              RouteUtils.navigateTo(const EmptyResult());
+              CustomNavigator.push(Routes.EmptyResult);
+
+              // RouteUtils.navigateTo(const EmptyResult());
             },
           ),
           SizedBox(height: 16.h),

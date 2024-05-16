@@ -1,11 +1,11 @@
-import 'package:bin_omaira_motors/features/order_details/views/order_details_view.dart';
 import 'package:bin_omaira_motors/features/orders/widgets/accepted_state_widget.dart';
 import 'package:bin_omaira_motors/features/orders/widgets/declined_state_widget.dart';
 import 'package:bin_omaira_motors/features/orders/widgets/new_purchase_widget.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,9 +20,11 @@ class CustomOrderProductCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         clickable
-            ? RouteUtils.navigateTo(OrderDetailsView(
-                orderState: orderState,
-              ))
+            ? CustomNavigator.push(Routes.OREDERDETAILS, arguments: orderState)
+
+            //  RouteUtils.navigateTo(OrderDetailsView(
+            //     orderState: orderState,
+            //   ))
             : null;
       },
       child: Container(

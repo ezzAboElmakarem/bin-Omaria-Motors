@@ -1,6 +1,6 @@
 import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/custom_tex_form_field.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class HomeSearchField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24.w),
       child: GestureDetector(
         onTap: () {
-          RouteUtils.context.read<NavBarCubit>().changeView(1);
+          CustomNavigator.context.read<NavBarCubit>().changeView(1);
           // RouteUtils.navigateTo(const NavBarView());
           // (context as Element)
           //     .findAncestorStateOfType<NavBarViewState>()

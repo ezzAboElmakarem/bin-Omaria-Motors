@@ -1,7 +1,7 @@
 import 'package:bin_omaira_motors/features/on_bording/models/onbording_model.dart';
-import 'package:bin_omaira_motors/features/welcome_Screen/view/welcome_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -26,7 +26,9 @@ class NextBordingButton extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           if (isLastScreen == true) {
-            RouteUtils.navigateAndPopAll(const WelcomeView());
+            CustomNavigator.push(Routes.WELCOME);
+
+            // RouteUtils.navigateAndPopAll(const WelcomeView());
           } else {
             bordingController.nextPage(
                 duration: const Duration(milliseconds: 700),

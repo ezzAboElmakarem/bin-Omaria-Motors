@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -37,7 +37,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: leading ??
           IconButton(
             onPressed: () {
-              RouteUtils.pop();
+              CustomNavigator.pop();
             },
             icon: Icon(
               Icons.arrow_back_ios_new,

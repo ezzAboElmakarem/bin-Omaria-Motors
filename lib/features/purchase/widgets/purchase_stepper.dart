@@ -1,18 +1,13 @@
-import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
-import 'package:bin_omaira_motors/main_pages/navigation_bar_view.dart';
-import 'package:bin_omaira_motors/features/orders/views/orders_view.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/first_step_content.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/second_step_content.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/third_step_content.dart';
-import 'package:bin_omaira_motors/features/success_screen/views/success_screen_view.dart';
-import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:bin_omaira_motors/widgets/custom_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PurchaseStepper extends StatefulWidget {
@@ -28,32 +23,34 @@ class _PurchaseStepperState extends State<PurchaseStepper> {
   onStepContinue() {
     final isLastStep = currentStep == getSteps().length - 1;
     if (isLastStep) {
-      RouteUtils.navigateTo(
-        SuccessScreenView(
-          image: AssetsData.flyingCar,
-          texttitle: "purchase_success_title".tr(),
-          textSubtitle: "purchase_success_subtitle".tr(),
-          textButton: "my_orders".tr(),
-          backgroundColor: Colors.white,
-          textTitleColor: Colors.black,
-          textSubtitleColor: Colors.black.withOpacity(0.7),
-          buttonColor: kPrimaryColor.withOpacity(0.1),
-          textButtonColor: kPrimaryColor,
-          ontap: () {
-            RouteUtils.context.read<NavBarCubit>().changeView(2);
-            RouteUtils.navigateAndPopAll(const NavBarView());
-            // log('bnm,');
-            // RouteUtils.navigateTo(const NavBarView());
+      CustomNavigator.push(Routes.SUCCESSPURCHASE);
 
-            // setState(() {
-            //   (context as Element)
-            //       .findAncestorStateOfType<NavBarViewState>()
-            //       ?.navigateToOrderScreen();
-            // });
-          },
-          navTo: const OrdersView(),
-        ),
-      );
+      // RouteUtils.navigateTo(
+      //   SuccessScreenView(
+      //     image: AssetsData.flyingCar,
+      //     texttitle: "purchase_success_title".tr(),
+      //     textSubtitle: "purchase_success_subtitle".tr(),
+      //     textButton: "my_orders".tr(),
+      //     backgroundColor: Colors.white,
+      //     textTitleColor: Colors.black,
+      //     textSubtitleColor: Colors.black.withOpacity(0.7),
+      //     buttonColor: kPrimaryColor.withOpacity(0.1),
+      //     textButtonColor: kPrimaryColor,
+      //     ontap: () {
+      //       RouteUtils.context.read<NavBarCubit>().changeView(2);
+      //       RouteUtils.navigateAndPopAll(const NavBarView());
+      //       // log('bnm,');
+      //       // RouteUtils.navigateTo(const NavBarView());
+
+      //       // setState(() {
+      //       //   (context as Element)
+      //       //       .findAncestorStateOfType<NavBarViewState>()
+      //       //       ?.navigateToOrderScreen();
+      //       // });
+      //     },
+      //     navTo: const OrdersView(),
+      //   ),
+      // );
     } else {
       setState(() {
         currentStep += 1;

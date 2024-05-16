@@ -1,9 +1,9 @@
-import 'package:bin_omaira_motors/main_pages/navigation_bar_view.dart';
 import 'package:bin_omaira_motors/features/welcome_Screen/widgets/welcome_screen_buttons.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +26,9 @@ class WelcomeView extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    RouteUtils.navigateAndPopUntilFirstPage(const NavBarView());
+                    CustomNavigator.push(Routes.NavBAR);
+
+                    // RouteUtils.navigateAndPopUntilFirstPage(const NavBarView());
                   },
                   child: SizedBox(
                     height: 40.h,

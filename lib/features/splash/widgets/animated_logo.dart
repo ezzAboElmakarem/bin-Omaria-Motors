@@ -1,6 +1,6 @@
-import 'package:bin_omaira_motors/features/on_bording/view/on_bording_view.dart';
 import 'package:bin_omaira_motors/helper/assets.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -56,7 +56,9 @@ class AnimationLogo extends StatelessWidget {
         );
       },
       onCompleted: () {
-        RouteUtils.navigateAndPopAll(const OnBordingView());
+        CustomNavigator.push(Routes.BOARDING);
+
+        // RouteUtils.navigateAndPopAll(const OnBordingView());
       },
     );
   }

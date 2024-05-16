@@ -1,6 +1,6 @@
 import 'package:bin_omaira_motors/features/purchase/widgets/purchase_stepper.dart';
-import 'package:bin_omaira_motors/helper/routes.dart';
 import 'package:bin_omaira_motors/helper/text_styles.dart';
+import 'package:bin_omaira_motors/navigation/custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/custom_app_bar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class PurchaseView extends StatelessWidget {
         titleStyle: TextStyles.textstyle14.copyWith(color: Colors.white),
         leading: GestureDetector(
             onTap: () {
-              RouteUtils.pop();
+              CustomNavigator.pop();
             },
             child: const Icon(Icons.arrow_back_ios_new, color: Colors.white)),
       ),
