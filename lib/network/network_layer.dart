@@ -42,6 +42,7 @@ class Network {
       if (_token != null) 'Authorization': 'Bearer $_token',
       'Accept': 'application/json',
       "User-Agent": "Dart",
+      "X-Requested-With": "XMLHttpRequest",
       'Accept-Language': lang,
     };
     if (header != null) {

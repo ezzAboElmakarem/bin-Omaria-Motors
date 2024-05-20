@@ -1,3 +1,4 @@
+import 'package:bin_omaira_motors/features/register/bloc/register_bloc.dart';
 import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
@@ -55,8 +56,15 @@ class MyApp extends StatelessWidget {
               statusBarIconBrightness: Brightness.light,
             ),
             child: KeyboardPopScaffold(
-              child: BlocProvider(
-                create: (context) => NavBarCubit(),
+              child: MultiBlocProvider(
+                providers: [
+                  BlocProvider(
+                    create: (context) => NavBarCubit(),
+                  ),
+                  BlocProvider(
+                    create: (context) => RegisterBloc(),
+                  )
+                ],
                 child: MaterialApp(
                   title: 'Flutter Demo',
                   debugShowCheckedModeBanner: false,
