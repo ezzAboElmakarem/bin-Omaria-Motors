@@ -50,17 +50,18 @@ class RegisterBloc extends Bloc<AppEvent, AppState> {
 
       if (response.statusCode == 200) {
         log("response => $response");
-        log(response.statusCode.toString());
+        log("status code " + response.statusCode.toString());
 
-        // String userId = response.data["data"]["user_id"].toString();
+        String userId = response.data["data"]["id"].toString();
         // String code = response.data["data"]["code"].toString();
 
-        // GetStorage().write('user_id', userId);
+        GetStorage().write('user_id', userId);
         // GetStorage().write('  code', code);
         // GetStorage().write('email', email.text);
-        // emit(Done());
-        // AppStorage.cacheId(response.data["data"]["user_id"]);
-
+        emit(Done());
+        AppStorage.cacheId(response.data["data"]["id"]);
+        log("user id " + AppStorage.getUserId.toString());
+        log("user code " + response.data["data"]["code"].toString());
         // AppStorage.cacheToken(response.data['data']['token']);
         CustomNavigator.push(Routes.VERIFICATION);
         // RouteUtils.navigateAndPopAll(const VerfiyCodeScreenView(

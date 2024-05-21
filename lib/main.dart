@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/register/bloc/register_bloc.dart';
+import 'package:bin_omaira_motors/features/verification/bloc/verification_bloc.dart';
 import 'package:bin_omaira_motors/main_pages/cubit/nav_bar_cubit.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/helper/colors_styles.dart';
@@ -63,7 +64,10 @@ class MyApp extends StatelessWidget {
                   ),
                   BlocProvider(
                     create: (context) => RegisterBloc(),
-                  )
+                  ),
+                  BlocProvider(
+                    create: (context) => VerificationBLoc(),
+                  ),
                 ],
                 child: MaterialApp(
                   title: 'Flutter Demo',
