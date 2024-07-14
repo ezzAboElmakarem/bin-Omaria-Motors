@@ -21,7 +21,7 @@ class _AcceptTermsWidgetState extends State<AcceptTermsWidget> {
       children: [
         Checkbox(
           activeColor: kPrimaryColor,
-          overlayColor: MaterialStateProperty.all<Color>(kPrimaryColor),
+          overlayColor: WidgetStateProperty.all<Color>(kPrimaryColor),
           shape: const CircleBorder(),
           value: ischecked_1,
           onChanged: (value) {

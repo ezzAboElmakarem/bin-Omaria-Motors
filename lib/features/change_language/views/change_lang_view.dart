@@ -138,7 +138,14 @@ class _ChangeLanguageViewState extends State<ChangeLanguageView> {
                 });
               },
             ),
-            // CustomRadioTileItem(
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+ // CustomRadioTileItem(
             //         imageurl: AssetsData.enFlag,
             //         title: "arabic".tr(),
             //         groupValue: selectedOption,
@@ -177,9 +184,3 @@ class _ChangeLanguageViewState extends State<ChangeLanguageView> {
             //     itemCount: typesOptions.length,
             //   ),
             // ),
-          ],
-        ),
-      ),
-    );
-  }
-}
